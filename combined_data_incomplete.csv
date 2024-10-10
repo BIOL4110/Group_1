@@ -1,210 +1,209 @@
-"ScientificName","Family.x","CommonName","TeleostOrElasmo","MRRawMgPerKgPerH","MRRawDataOrMean","BodyMassInGrams","MassRawDataOrMean","Family.y","trophic level"
-"Albula vulpes","Albulidae","Bonefish","Teleost",154300,"Mean",672.43,"Mean","Albulidae","3.7   +/- s.e. 0.28"
-"Ammodytes tobianus","Ammodytidae","Lesser sand-eel","Teleost",413.4,"Mean",3.4,"Mean","Ammodytidae","3.1   +/- s.e. 0.07"
-"Anarhichas lupus","Anarhichadidae","Common wolf-fish","Teleost",125140,"Mean",1390,"Mean","Anarhichadidae","3.6"
-"Anarhichas lupus","Anarhichadidae","Common wolf-fish","Teleost",82350,"Mean",1390,"Mean","Anarhichadidae","3.6"
-"Anoplopoma fimbria","Anoplopomatidae","Sablefish","Teleost",539.2,"Mean",993,"Raw","Anoplopomatidae","3.8   +/- s.e. 0.2"
-"Boreogadus saida","Gadidae","Arctic cod","Teleost",82.56,"Mean",23.3,"Mean","Gadidae","3.1   +/- s.e. 0.11"
-"Caranx caballus","Carangidae","Green jack","Teleost",78430,"Mean",189.7,"Mean","Carangidae","4+/- s.e. 0.54"
-"Carcharhinus leucas","Carcharhinidae","Bull shark","Elasmo",230.04,"Mean",2810,"Mean","Carcharhinidae","4.3   +/- s.e. 0.46"
-"Carcharhinus leucas","Carcharhinidae","Bull shark","Elasmo",351.41,"Mean",2730,"Mean","Carcharhinidae","4.3   +/- s.e. 0.46"
-"Carcharhinus leucas","Carcharhinidae","Bull shark","Elasmo",355.54,"Mean",2750,"Mean","Carcharhinidae","4.3   +/- s.e. 0.46"
-"Carcharhinus melanopterus","Carcharhinidae","Blacktip reef shark","Elasmo",221.98,"Mean",1050,"Mean","Carcharhinidae","3.9   +/- s.e. 0.41"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",100.9105088,"Raw",7300,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",106.4477738,"Raw",2660,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",121.3541858,"Raw",5090,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",120.0908303,"Raw",5460,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",82.3615522,"Raw",5690,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",96.3684471,"Raw",7760,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",203.9786524,"Raw",3310,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",127.3663487,"Raw",4220,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",137.641184,"Raw",3980,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",144.8539328,"Raw",2560,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",144.8539328,"Raw",2560,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",92.474247,"Raw",6810,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",92.474247,"Raw",6810,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",87.8073106,"Raw",6840,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",79.0631119,"Raw",7300,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",210.6121192,"Raw",2660,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",117.8615634,"Raw",5090,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",187.2214267,"Raw",5460,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",120.5218507,"Raw",5690,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",171.2532268,"Raw",7760,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",186.3984441,"Raw",3310,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",118.6887618,"Raw",4220,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",231.1794021,"Raw",3980,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",110.7133332,"Raw",2560,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",91.7662866,"Raw",6810,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",91.7662866,"Raw",6810,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",163.0917505,"Raw",6840,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",90.8597957,"Raw",7300,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",255.5815952,"Raw",2660,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",122.6875439,"Raw",5090,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",136.5883098,"Raw",5460,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",302.6681092,"Raw",5690,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",58.0218925,"Raw",7760,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",199.3023817,"Raw",3310,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",167.1618294,"Raw",4220,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",95.0010263,"Raw",3980,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",214.8038192,"Raw",6810,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",70.558691,"Raw",6840,"Raw","Carcharhinidae","4.5"
-"Carcharhinus plumbeus","Carcharhinidae","Sandbar shark","Elasmo",266.017841,"Raw",2600,"Raw","Carcharhinidae","4.5"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",11.0761980833333,"Raw",119.55,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",9.26304370833333,"Raw",155.29,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",11.5446340416667,"Raw",153.85,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",4.444163,"Raw",59.84,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",3.788309125,"Raw",44.98,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",0.42678825,"Raw",2.981,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",16.9764856666667,"Raw",151.3,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",14.2900945,"Raw",107.97,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",7.172677,"Raw",22.396,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",1.08746258333333,"Raw",2.644,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",8.37183241666667,"Raw",57.5,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",2.671312375,"Raw",136.835,"Raw","Acanthuridae","2"
-"Ctenochaetus striatus","Acanthuridae","Striated surgeonfish","Teleost",0.0933755833333333,"Raw",1.776,"Raw","Acanthuridae","2"
-"Cyclopterus lumpus","Cyclopteridae","Lumpfish","Teleost",117,"Mean",291,"Mean","Cyclopteridae","3.9"
-"Cyclopterus lumpus","Cyclopteridae","Lumpfish","Teleost",173,"Mean",321,"Mean","Cyclopteridae","3.9"
-"Cyclopterus lumpus","Cyclopteridae","Lumpfish","Teleost",148,"Mean",319,"Mean","Cyclopteridae","3.9"
-"Dicentrarchus labrax","Moronidae","European bass","Teleost",283,"Mean",514,"Mean","Moronidae","3.5+/- s.e. 0.5"
-"Dicentrarchus labrax","Moronidae","European bass","Teleost",441.1,"Mean",200,"Mean","Moronidae","3.5+/- s.e. 0.5"
-"Electrona antarctica","Myctophidae","Antarctic lanternfish","Teleost",0.047,"Mean",4.6,"Middle","Myctophidae","3.2   +/- s.e. 0.35"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",10.9252956666667,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",12.0235956666667,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",13.2338176666667,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",14.56555,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",16.031519,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",17.6456713333333,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Engraulis ringens","Engraulidae","Peruvian anchovetta","Teleost",19.4203846666667,"Mean",12.6,"Mean","Engraulidae","2.9+/- s.e. 0.38"
-"Gadus macrocephalus","Gadidae","Pacific cod","Teleost",187.3125,"Mean",1500,"Mean","Gadidae","4.2   +/- s.e. 0.15"
-"Gadus macrocephalus","Gadidae","Pacific cod","Teleost",147.2625,"Mean",1500,"Mean","Gadidae","4.2   +/- s.e. 0.15"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",130.8,"Mean",243.4,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",165,"Mean",371.1,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",211.9,"Mean",298.4,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",123.5,"Raw",160,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",98.4,"Raw",103,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",82.1,"Raw",184,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",63.1,"Raw",126,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",98.9,"Raw",190,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",82.2,"Raw",150,"Raw","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",154.58,"Mean",195.8,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",113.15,"Mean",163.9,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",131.49,"Mean",180,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",178.49,"Mean",169.1,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gadus morhua","Gadidae","Atlantic cod","Teleost",138.64,"Mean",162.2,"Mean","Gadidae","4.1   +/- s.e. 0.18"
-"Gasterosteus aculeatus","Gasterosteidae","Three-spined stickleback","Teleost",1258240,"Mean",3.33,"Mean","Gasterosteidae","3.3   +/- s.e. 0.18"
-"Gymnoscopelus braueri","Myctophidae","Brauer’s lanternfish","Teleost",0.027,"Mean",12.2,"Middle","Myctophidae","3.2   +/- s.e. 0.32"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",156.32557,"Raw",63.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",173.00991,"Raw",65.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",84.60593,"Raw",47,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",120.14728,"Raw",75,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",99.18765,"Raw",70,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",202.07053,"Raw",33.9,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",194.14541,"Raw",63.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",88.80625,"Raw",93,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",81.1842,"Raw",60,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",155.51629,"Raw",49.6,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",77.93407,"Raw",65.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",195.54448,"Raw",70.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",219.45248,"Raw",55.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",141.33788,"Raw",73,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",241.82051,"Raw",76.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",92.95794,"Raw",78,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",146.3508,"Raw",44.2,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",159.37608,"Raw",48.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",273.99821,"Raw",84.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",223.77918,"Raw",74.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",265.04737,"Raw",66.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",249.53283,"Raw",65.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",162.75885,"Raw",63.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",261.09251,"Raw",69.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",273.93733,"Raw",54.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",240.0162,"Raw",84,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",177.26498,"Raw",53.2,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",166.4718,"Raw",60,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",296.19037,"Raw",56.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",190.08775,"Raw",79.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",116.83376,"Raw",116,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",140.63379,"Raw",105.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",160.75468,"Raw",64,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",184.72112,"Raw",56,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",147.29366,"Raw",95.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",132.9054,"Raw",74,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",114.06203,"Raw",62,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",215.60154,"Raw",61,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",266.44614,"Raw",37.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",207.20849,"Raw",71,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",187.99818,"Raw",59.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",142.91199,"Raw",60.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",259.00829,"Raw",60,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",147.26348,"Raw",62.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",90.32966,"Raw",95,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",167.85225,"Raw",83,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",184.90541,"Raw",83.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",133.53577,"Raw",73,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",165.3235,"Raw",74,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",126.6084,"Raw",85.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",156.68771,"Raw",79.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",161.97023,"Raw",56.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",154.04283,"Raw",92.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",108.05115,"Raw",91.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",112.75473,"Raw",98.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",155.17413,"Raw",83,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",147.8135,"Raw",86.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",169.23717,"Raw",75.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",171.61822,"Raw",83,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",147.62586,"Raw",90.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",167.23296,"Raw",80,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",83.91812,"Raw",115,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",148.97354,"Raw",55.2,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",208.92633,"Raw",62.4,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",129.1201,"Raw",81.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",217.17841,"Raw",90,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",136.42029,"Raw",88.5,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",161.48571,"Raw",105,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Heterodontus portusjacksoni","Heterodontidae","Portjackson shark","Elasmo",55.51535,"Raw",98,"Raw","Heterodontidae","3.4+/- s.e. 0.48"
-"Isurus oxyrinchus","Lamnidae","Mako shark","Elasmo",417,"Raw",4900,"Raw","Lamnidae","4.5"
-"Kuhlia sandvicensis","Kuhliidae","Hawaiian flagtail","Teleost",584,"Mean",30,"Mean","Kuhliidae","3.8+/- s.e. 0.56"
-"Lates calcarifer","Latidae","Barramundi","Teleost",404.4,"Mean",89.9,"Raw","Latidae","3.8+/- s.e. 0.6"
-"Limanda limanda","Pleuronectidae","Common dab","Teleost",92.14,"Mean",399.9,"Mean","Pleuronectidae","3   +/- s.e. 0.01"
-"Limanda limanda","Pleuronectidae","Common dab","Teleost",123.71,"Mean",236.2,"Raw","Pleuronectidae","3   +/- s.e. 0.01"
-"Limanda limanda","Pleuronectidae","Common dab","Teleost",129.55,"Mean",395.8,"Mean","Pleuronectidae","3   +/- s.e. 0.01"
-"Mallotus villosus","Osmeridae","Capelin","Teleost",446.7,"Mean",26.83,"Middle","Osmeridae","3.2   +/- s.e. 0.09"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",266,"Raw",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",235,"Raw",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",201,"Raw",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",169,"Raw",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",259,"Raw",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",256,"Mean",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Melanogrammus aeglefinus","Gadidae","Haddock","Teleost",135,"Mean",155.9,"Mean","Gadidae","4   +/- s.e. 0.13"
-"Merlangius merlangus","Gadidae","Whiting","Teleost",85.2,"Mean",297,"Mean","Gadidae","4.4   +/- s.e. 0.18"
-"Microstomus kitt","Pleuronectidae","Lemon sole","Teleost",79.38,"Mean",229.4,"Mean","Pleuronectidae","3.2+/- s.e. 0.33"
-"Microstomus kitt","Pleuronectidae","Lemon sole","Teleost",126.02,"Mean",248.7,"Mean","Pleuronectidae","3.2+/- s.e. 0.33"
-"Microstomus kitt","Pleuronectidae","Lemon sole","Teleost",112.82,"Mean",221.3,"Mean","Pleuronectidae","3.2+/- s.e. 0.33"
-"Morone saxatilis","Moronidae","Striped bass","Teleost",254.878048780488,"Mean",1300,"Mean","Moronidae","4.6   +/- s.e. 0.25"
-"Morone saxatilis","Moronidae","Striped bass","Teleost",363,"Mean",504,"Mean","Moronidae","4.6   +/- s.e. 0.25"
-"Morone saxatilis","Moronidae","Striped bass","Teleost",437,"Mean",426,"Mean","Moronidae","4.6   +/- s.e. 0.25"
-"Morone saxatilis","Moronidae","Striped bass","Teleost",300,"Mean",1300,"Mean","Moronidae","4.6   +/- s.e. 0.25"
-"Morone saxatilis","Moronidae","Striped bass","Teleost",334,"Mean",386,"Mean","Moronidae","4.6   +/- s.e. 0.25"
-"Myoxocephalus scorpius","Cottidae","shorthorn sculpin","Teleost",78,"Mean",382.5,"Middle","Cottidae","3.9"
-"Myoxocephalus scorpius","Cottidae","shorthorn sculpin","Teleost",93,"Mean",382.5,"Middle","Cottidae","3.9"
-"Myoxocephalus scorpius","Cottidae","shorthorn sculpin","Teleost",61,"Mean",382.5,"Middle","Cottidae","3.9"
-"Naso lituratus","Acanthuridae","Orangespine unicornfish","Teleost",1.734286125,"Raw",4.68,"Raw","Acanthuridae","2.3+/- s.e. 0.19"
-"Naso lituratus","Acanthuridae","Orangespine unicornfish","Teleost",1.60609370833333,"Raw",5.409,"Raw","Acanthuridae","2.3+/- s.e. 0.19"
-"Naso lituratus","Acanthuridae","Orangespine unicornfish","Teleost",1.63564054166667,"Raw",4.161,"Raw","Acanthuridae","2.3+/- s.e. 0.19"
-"Naso lituratus","Acanthuridae","Orangespine unicornfish","Teleost",1.85326058333333,"Raw",5.227,"Raw","Acanthuridae","2.3+/- s.e. 0.19"
-"Negaprion brevirostris","Carcharhinidae","Lemon shark","Elasmo",242.83,"Mean",1385,"Mean","Carcharhinidae","4.3   +/- s.e. 0.5"
-"Ostorhinchus doederleini","Apogonidae","fourline cardinalfish","Teleost",439,"Mean",2.68,"Mean","Apogonidae","3.6+/- s.e. 0.56"
-"Ostorhinchus doederleini","Apogonidae","fourline cardinalfish","Teleost",419,"Mean",2.68,"Mean","Apogonidae","3.6+/- s.e. 0.56"
-"Ostorhinchus doederleini","Apogonidae","fourline cardinalfish","Teleost",606,"Mean",2.68,"Mean","Apogonidae","3.6+/- s.e. 0.56"
-"Ostorhinchus doederleini","Apogonidae","fourline cardinalfish","Teleost",194,"Mean",2.68,"Mean","Apogonidae","3.6+/- s.e. 0.56"
-"Pleuronectes platessa","Pleuronectidae","Plaice","Teleost",116.24,"Mean",383.03,"Mean","Pleuronectidae","3.2   +/- s.e. 0.27"
-"Pleuronectes platessa","Pleuronectidae","Plaice","Teleost",129.09,"Mean",281.16,"Mean","Pleuronectidae","3.2   +/- s.e. 0.27"
-"Pleuronectes platessa","Pleuronectidae","Plaice","Teleost",74.64,"Mean",288.63,"Mean","Pleuronectidae","3.2   +/- s.e. 0.27"
-"Pollachius virens","Gadidae","Saithe","Teleost",247.1,"Mean",485,"Mean","Gadidae","4.3   +/- s.e. 0.35"
-"Pollachius virens","Gadidae","Saithe","Teleost",492,"Mean",151.8,"Mean","Gadidae","4.3   +/- s.e. 0.35"
-"Poromitra crassiceps","Melamphaidae","Crested bigscale","Teleost",0.032,"Mean",4.5,"Middle","Melamphaidae","3.1+/- s.e. 0.3"
-"Pseudopleuronectes americanus","Pleuronectidae","Winter flounder","Teleost",16000,"Mean",325,"Mean","Pleuronectidae","3.6   +/- s.e. 0.08"
-"Reinhardtius hippoglossoides","Pleuronectidae","Greenland halibut","Teleost",87.06,"Mean",80,"Mean","Pleuronectidae","4.4   +/- s.e. 0.14"
-"Rhinecanthus aculeatus","Balistidae","White-banded triggerfish","Teleost",110330,"Mean",136,"Mean","Balistidae","3.2   +/- s.e. 0.14"
-"Seriola lalandi","Carangidae","Yellowtail kingfish","Teleost",562.8,"Mean",2000,"Mean","Carangidae","4.2   +/- s.e. 0.14"
-"Trachurus trachurus","Carangidae","Atlantic horse mackerel","Teleost",419.02,"Mean",359.6,"Mean","Carangidae","3.7   +/- s.e. 0.02"
+ScientificName,Family.x,CommonName,TeleostOrElasmo,MRRawMgPerKgPerH,MRRawDataOrMean,BodyMassInGrams,MassRawDataOrMean,Family.y,trophic_level,Standard_Error
+Albula vulpes,Albulidae,Bonefish,Teleost,154300,Mean,672.43,Mean,Albulidae,3.7,0.28
+Ammodytes tobianus,Ammodytidae,Lesser sand-eel,Teleost,413.4,Mean,3.4,Mean,Ammodytidae,3.1,0.07
+Anarhichas lupus,Anarhichadidae,Common wolf-fish,Teleost,125140,Mean,1390,Mean,Anarhichadidae,3.6,
+Anarhichas lupus,Anarhichadidae,Common wolf-fish,Teleost,82350,Mean,1390,Mean,Anarhichadidae,3.6,
+Anoplopoma fimbria,Anoplopomatidae,Sablefish,Teleost,539.2,Mean,993,Raw,Anoplopomatidae,3.8,0.2
+Boreogadus saida,Gadidae,Arctic cod,Teleost,82.56,Mean,23.3,Mean,Gadidae,3.1,0.11
+Caranx caballus,Carangidae,Green jack,Teleost,78430,Mean,189.7,Mean,Carangidae,4,0.54
+Carcharhinus leucas,Carcharhinidae,Bull shark,Elasmo,230.04,Mean,2810,Mean,Carcharhinidae,4.3,0.46
+Carcharhinus leucas,Carcharhinidae,Bull shark,Elasmo,351.41,Mean,2730,Mean,Carcharhinidae,4.3,0.46
+Carcharhinus leucas,Carcharhinidae,Bull shark,Elasmo,355.54,Mean,2750,Mean,Carcharhinidae,4.3,0.46
+Carcharhinus melanopterus,Carcharhinidae,Blacktip reef shark,Elasmo,221.98,Mean,1050,Mean,Carcharhinidae,3.9,0.41
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,100.9105088,Raw,7300,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,106.4477738,Raw,2660,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,121.3541858,Raw,5090,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,120.0908303,Raw,5460,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,82.3615522,Raw,5690,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,96.3684471,Raw,7760,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,203.9786524,Raw,3310,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,127.3663487,Raw,4220,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,137.641184,Raw,3980,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,144.8539328,Raw,2560,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,144.8539328,Raw,2560,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,92.474247,Raw,6810,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,92.474247,Raw,6810,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,87.8073106,Raw,6840,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,79.0631119,Raw,7300,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,210.6121192,Raw,2660,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,117.8615634,Raw,5090,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,187.2214267,Raw,5460,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,120.5218507,Raw,5690,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,171.2532268,Raw,7760,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,186.3984441,Raw,3310,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,118.6887618,Raw,4220,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,231.1794021,Raw,3980,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,110.7133332,Raw,2560,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,91.7662866,Raw,6810,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,91.7662866,Raw,6810,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,163.0917505,Raw,6840,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,90.8597957,Raw,7300,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,255.5815952,Raw,2660,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,122.6875439,Raw,5090,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,136.5883098,Raw,5460,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,302.6681092,Raw,5690,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,58.0218925,Raw,7760,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,199.3023817,Raw,3310,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,167.1618294,Raw,4220,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,95.0010263,Raw,3980,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,214.8038192,Raw,6810,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,70.558691,Raw,6840,Raw,Carcharhinidae,4.5,
+Carcharhinus plumbeus,Carcharhinidae,Sandbar shark,Elasmo,266.017841,Raw,2600,Raw,Carcharhinidae,4.5,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,11.07619808,Raw,119.55,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,9.263043708,Raw,155.29,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,11.54463404,Raw,153.85,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,4.444163,Raw,59.84,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,3.788309125,Raw,44.98,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,0.42678825,Raw,2.981,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,16.97648567,Raw,151.3,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,14.2900945,Raw,107.97,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,7.172677,Raw,22.396,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,1.087462583,Raw,2.644,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,8.371832417,Raw,57.5,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,2.671312375,Raw,136.835,Raw,Acanthuridae,2,
+Ctenochaetus striatus,Acanthuridae,Striated surgeonfish,Teleost,0.093375583,Raw,1.776,Raw,Acanthuridae,2,
+Cyclopterus lumpus,Cyclopteridae,Lumpfish,Teleost,117,Mean,291,Mean,Cyclopteridae,3.9,
+Cyclopterus lumpus,Cyclopteridae,Lumpfish,Teleost,173,Mean,321,Mean,Cyclopteridae,3.9,
+Cyclopterus lumpus,Cyclopteridae,Lumpfish,Teleost,148,Mean,319,Mean,Cyclopteridae,3.9,
+Dicentrarchus labrax,Moronidae,European bass,Teleost,283,Mean,514,Mean,Moronidae,3.5,0.5
+Dicentrarchus labrax,Moronidae,European bass,Teleost,441.1,Mean,200,Mean,Moronidae,3.5,0.5
+Electrona antarctica,Myctophidae,Antarctic lanternfish,Teleost,0.047,Mean,4.6,Middle,Myctophidae,3.2,0.35
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,10.92529567,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,12.02359567,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,13.23381767,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,14.56555,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,16.031519,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,17.64567133,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Engraulis ringens,Engraulidae,Peruvian anchovetta,Teleost,19.42038467,Mean,12.6,Mean,Engraulidae,2.9,0.38
+Gadus macrocephalus,Gadidae,Pacific cod,Teleost,187.3125,Mean,1500,Mean,Gadidae,4.2 � ,0.15
+Gadus macrocephalus,Gadidae,Pacific cod,Teleost,147.2625,Mean,1500,Mean,Gadidae,4.2 � ,0.15
+Gadus morhua,Gadidae,Atlantic cod,Teleost,130.8,Mean,243.4,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,165,Mean,371.1,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,211.9,Mean,298.4,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,123.5,Raw,160,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,98.4,Raw,103,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,82.1,Raw,184,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,63.1,Raw,126,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,98.9,Raw,190,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,82.2,Raw,150,Raw,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,154.58,Mean,195.8,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,113.15,Mean,163.9,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,131.49,Mean,180,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,178.49,Mean,169.1,Mean,Gadidae,4.1 � ,0.18
+Gadus morhua,Gadidae,Atlantic cod,Teleost,138.64,Mean,162.2,Mean,Gadidae,4.1 � ,0.18
+Gymnoscopelus braueri,Myctophidae,Brauer’s lanternfish,Teleost,0.027,Mean,12.2,Middle,Myctophidae,3.2,0.32
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,156.32557,Raw,63.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,173.00991,Raw,65.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,84.60593,Raw,47,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,120.14728,Raw,75,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,99.18765,Raw,70,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,202.07053,Raw,33.9,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,194.14541,Raw,63.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,88.80625,Raw,93,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,81.1842,Raw,60,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,155.51629,Raw,49.6,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,77.93407,Raw,65.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,195.54448,Raw,70.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,219.45248,Raw,55.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,141.33788,Raw,73,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,241.82051,Raw,76.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,92.95794,Raw,78,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,146.3508,Raw,44.2,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,159.37608,Raw,48.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,273.99821,Raw,84.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,223.77918,Raw,74.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,265.04737,Raw,66.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,249.53283,Raw,65.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,162.75885,Raw,63.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,261.09251,Raw,69.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,273.93733,Raw,54.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,240.0162,Raw,84,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,177.26498,Raw,53.2,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,166.4718,Raw,60,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,296.19037,Raw,56.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,190.08775,Raw,79.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,116.83376,Raw,116,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,140.63379,Raw,105.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,160.75468,Raw,64,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,184.72112,Raw,56,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,147.29366,Raw,95.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,132.9054,Raw,74,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,114.06203,Raw,62,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,215.60154,Raw,61,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,266.44614,Raw,37.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,207.20849,Raw,71,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,187.99818,Raw,59.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,142.91199,Raw,60.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,259.00829,Raw,60,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,147.26348,Raw,62.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,90.32966,Raw,95,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,167.85225,Raw,83,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,184.90541,Raw,83.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,133.53577,Raw,73,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,165.3235,Raw,74,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,126.6084,Raw,85.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,156.68771,Raw,79.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,161.97023,Raw,56.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,154.04283,Raw,92.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,108.05115,Raw,91.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,112.75473,Raw,98.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,155.17413,Raw,83,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,147.8135,Raw,86.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,169.23717,Raw,75.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,171.61822,Raw,83,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,147.62586,Raw,90.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,167.23296,Raw,80,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,83.91812,Raw,115,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,148.97354,Raw,55.2,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,208.92633,Raw,62.4,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,129.1201,Raw,81.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,217.17841,Raw,90,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,136.42029,Raw,88.5,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,161.48571,Raw,105,Raw,Heterodontidae,3.4,0.48
+Heterodontus portusjacksoni,Heterodontidae,Portjackson shark,Elasmo,55.51535,Raw,98,Raw,Heterodontidae,3.4,0.48
+Isurus oxyrinchus,Lamnidae,Mako shark,Elasmo,417,Raw,4900,Raw,Lamnidae,4.5,
+Kuhlia sandvicensis,Kuhliidae,Hawaiian flagtail,Teleost,584,Mean,30,Mean,Kuhliidae,3.8,0.56
+Lates calcarifer,Latidae,Barramundi,Teleost,404.4,Mean,89.9,Raw,Latidae,3.8,0.6
+Limanda limanda,Pleuronectidae,Common dab,Teleost,92.14,Mean,399.9,Mean,Pleuronectidae,3 � ,0.01
+Limanda limanda,Pleuronectidae,Common dab,Teleost,123.71,Mean,236.2,Raw,Pleuronectidae,3 � ,0.01
+Limanda limanda,Pleuronectidae,Common dab,Teleost,129.55,Mean,395.8,Mean,Pleuronectidae,3 � ,0.01
+Mallotus villosus,Osmeridae,Capelin,Teleost,446.7,Mean,26.83,Middle,Osmeridae,3.2 � ,0.09
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,266,Raw,155.9,Mean,Gadidae,4 � ,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,235,Raw,155.9,Mean,Gadidae,4 � ,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,201,Raw,155.9,Mean,Gadidae,4 � ,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,169,Raw,155.9,Mean,Gadidae,4 � ,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,259,Raw,155.9,Mean,Gadidae,4 � ,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,256,Mean,155.9,Mean,Gadidae,4,0.13
+Melanogrammus aeglefinus,Gadidae,Haddock,Teleost,135,Mean,155.9,Mean,Gadidae,4,0.13
+Merlangius merlangus,Gadidae,Whiting,Teleost,85.2,Mean,297,Mean,Gadidae,4.4 � ,0.18
+Microstomus kitt,Pleuronectidae,Lemon sole,Teleost,79.38,Mean,229.4,Mean,Pleuronectidae,3.2 3,0.33
+Microstomus kitt,Pleuronectidae,Lemon sole,Teleost,126.02,Mean,248.7,Mean,Pleuronectidae,3.2 3,0.33
+Microstomus kitt,Pleuronectidae,Lemon sole,Teleost,112.82,Mean,221.3,Mean,Pleuronectidae,3.2 3,0.33
+Morone saxatilis,Moronidae,Striped bass,Teleost,254.8780488,Mean,1300,Mean,Moronidae,4.6 � ,0.25
+Morone saxatilis,Moronidae,Striped bass,Teleost,363,Mean,504,Mean,Moronidae,4.6 � ,0.25
+Morone saxatilis,Moronidae,Striped bass,Teleost,437,Mean,426,Mean,Moronidae,4.6 � ,0.25
+Morone saxatilis,Moronidae,Striped bass,Teleost,300,Mean,1300,Mean,Moronidae,4.6 � ,0.25
+Morone saxatilis,Moronidae,Striped bass,Teleost,334,Mean,386,Mean,Moronidae,4.6 � ,0.25
+Myoxocephalus scorpius,Cottidae,shorthorn sculpin,Teleost,78,Mean,382.5,Middle,Cottidae,3.9,
+Myoxocephalus scorpius,Cottidae,shorthorn sculpin,Teleost,93,Mean,382.5,Middle,Cottidae,3.9,
+Myoxocephalus scorpius,Cottidae,shorthorn sculpin,Teleost,61,Mean,382.5,Middle,Cottidae,3.9,
+Naso lituratus,Acanthuridae,Orangespine unicornfish,Teleost,1.734286125,Raw,4.68,Raw,Acanthuridae,2.3,0.19
+Naso lituratus,Acanthuridae,Orangespine unicornfish,Teleost,1.606093708,Raw,5.409,Raw,Acanthuridae,2.3,0.19
+Naso lituratus,Acanthuridae,Orangespine unicornfish,Teleost,1.635640542,Raw,4.161,Raw,Acanthuridae,2.3,0.19
+Naso lituratus,Acanthuridae,Orangespine unicornfish,Teleost,1.853260583,Raw,5.227,Raw,Acanthuridae,2.3,0.19
+Negaprion brevirostris,Carcharhinidae,Lemon shark,Elasmo,242.83,Mean,1385,Mean,Carcharhinidae,4.3 � ,0.5
+Ostorhinchus doederleini,Apogonidae,fourline cardinalfish,Teleost,439,Mean,2.68,Mean,Apogonidae,3.6,0.56
+Ostorhinchus doederleini,Apogonidae,fourline cardinalfish,Teleost,419,Mean,2.68,Mean,Apogonidae,3.6,0.56
+Ostorhinchus doederleini,Apogonidae,fourline cardinalfish,Teleost,606,Mean,2.68,Mean,Apogonidae,3.6,0.56
+Ostorhinchus doederleini,Apogonidae,fourline cardinalfish,Teleost,194,Mean,2.68,Mean,Apogonidae,3.6,0.56
+Pleuronectes platessa,Pleuronectidae,Plaice,Teleost,116.24,Mean,383.03,Mean,Pleuronectidae,3.2 � ,0.27
+Pleuronectes platessa,Pleuronectidae,Plaice,Teleost,129.09,Mean,281.16,Mean,Pleuronectidae,3.2 � ,0.27
+Pleuronectes platessa,Pleuronectidae,Plaice,Teleost,74.64,Mean,288.63,Mean,Pleuronectidae,3.2 � ,0.27
+Pollachius virens,Gadidae,Saithe,Teleost,247.1,Mean,485,Mean,Gadidae,4.3,0.35
+Pollachius virens,Gadidae,Saithe,Teleost,492,Mean,151.8,Mean,Gadidae,4.3,0.35
+Poromitra crassiceps,Melamphaidae,Crested bigscale,Teleost,0.032,Mean,4.5,Middle,Melamphaidae,3.1,0.3
+Pseudopleuronectes americanus,Pleuronectidae,Winter flounder,Teleost,16000,Mean,325,Mean,Pleuronectidae,3.6 � ,0.08
+Reinhardtius hippoglossoides,Pleuronectidae,Greenland halibut,Teleost,87.06,Mean,80,Mean,Pleuronectidae,4.4 � ,0.14
+Rhinecanthus aculeatus,Balistidae,White-banded triggerfish,Teleost,110330,Mean,136,Mean,Balistidae,3.2 � ,0.14
+Seriola lalandi,Carangidae,Yellowtail kingfish,Teleost,562.8,Mean,2000,Mean,Carangidae,4.2 � ,0.14
+Trachurus trachurus,Carangidae,Atlantic horse mackerel,Teleost,419.02,Mean,359.6,Mean,Carangidae,3.7 � ,0.02
