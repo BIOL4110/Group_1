@@ -98,34 +98,3 @@ ggplot(gravel_clean, aes(x = BodyMassInGrams, y = MRRawMgPerKgPerH)) +
   theme_minimal() +  # Use a minimal theme for better aesthetics
   theme(title.text = element_text(size = 12), axis.text = element_text(size = 12), 
         axis.title.x = element_text(size = 14), axis.title.y = element_text(size = 14))
-
-#potential linear model for relationship between body mass, metabolic rate and trophic position
-# Examine the structure of the data
-metabolic_data <- read.csv("gravel_clean.csv")
-trophic_data <- read.csv("trophic_position.csv")
-
-str(metabolic_data)
-str(trophic_data)
-
-# Merge the datasets on 'ScientificName'
-combined_data <- merge(metabolic_data, trophic_data, by = "ScientificName")
-
-# Log-transform the metabolic rate and body mass
-combined_data$log_MR <- log(combined_data$MRRawMgPerKgPerH)
-combined_data$log_BodyMass <- log(combined_data$BodyMassInGrams)
-
-# Fit the linear model
-model <- lm(trophic_level ~ log_MR + log_BodyMass, data = combined_data)
-
-# Summary of the model
-summary(model)
-
-# Optional: Visualize the results
-ggplot(combined_data, aes(x = trophic_level, y = log_MR)) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  labs(title = "Relationship between Trophic Level and Log Metabolic Rate",
-       x = "Trophic Level",
-       y = "Log of Metabolic Rate (mg/kg/h)") +
-  theme_minimal()
-
