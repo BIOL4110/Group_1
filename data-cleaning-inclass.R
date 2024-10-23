@@ -1,70 +1,30 @@
-
-
 ### data cleaning in class
-
 
 library(tidyverse)
 library(janitor)
-
-
-df <- read_csv("combined_data_incomplete.csv") %>% 
-  clean_names()
-
-
-str(df)
-
-
-unique(df$trophic_level)
-
-
-
-df2 <- df %>% 
-  tidyr::separate(trophic_level, into = c("trophic_position", "extra"), sep = "\xa") %>%
-  select(-extra)
-
-decimals <- df %>% 
-  mutate(contains_decimal = ifelse(grepl("\\.", trophic_level), "yes", "no")) %>%
-  select(trophic_level, contains_decimal, everything()) %>% 
-  filter(contains_decimal == "yes")
-
-
-no_decimals <- df %>% 
-  mutate(contains_decimal = ifelse(grepl("\\.", trophic_level), "yes", "no")) %>%
-  select(trophic_level, contains_decimal, everything()) %>% 
-  filter(contains_decimal == "no")
-
-
-decimals2 <- decimals %>%
-  separate(trophic_level, into = c("trophic_position", "extra"), sep = 3)
-
-
-  
-
-grepl("\\.", df$trophic_level)
-
-
-str(df2)
-unique(df2$trophic_position)
-
-
-df3 <- df2 %>% 
-  mutate(trophic_position = as.numeric(trophic_position))
-
-
-
+library(dplyr)
+library(tidyr)
+library(stringr)
 library(readxl)
 
-df3 <- read_xlsx("trophic_position.xlsx") %>% 
+### New approach: cleaning directly from excel, then merge datasets
+
+# reading excel data and cleaning up names
+df <- read_xlsx("trophic_position.xlsx") %>% 
   clean_names()
 
-
-df4 <- df3 %>% 
+# cleaning up trophic position column
+df2 <- df %>%
   separate(trophic_level, into = c("trophic_position", "extra"), sep = "\\+") %>%
-  mutate(trophic_position = trimws(trophic_position, which = "both")) %>% 
-  mutate(tro = as.numeric(trophic_position))
+  mutate(trophic_position = trimws(trophic_position, which = "both")) %>%
+  mutate(trophic_position = gsub("[^0-9.]", "", trophic_position)) %>%   # Remove non-numeric characters, allowing for decimals
+  mutate(tro = as.numeric(trophic_position))   # Convert to numeric
 
-
-
-?trimws
-
-str(df4)  
+# cleaning up standard error column
+trophic_data <- df2 %>% 
+  select(scientific_name, family, tro, extra) %>%
+  mutate(extra = str_extract(extra, "\\d\\.\\d{1,2}")) %>% 
+  rename(trophic_position = tro, standard_error = extra) %>% 
+  mutate(standard_error = as.numeric(standard_error))
+  
+str(trophic_data)
