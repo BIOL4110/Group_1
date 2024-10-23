@@ -1,8 +1,15 @@
 #load packages#
 library(dplyr)
 library(ggplot2)
+library(tidyverse)
+library(janitor)
+library(tidyr)
+library(stringr)
+library(readxl)
 
-#load datasets#
+### Gravel et al. data:
+
+#load dataset
 gravel_dataset <- read_csv("gravel_dataset.csv")
 View(gravel_dataset)
 
@@ -83,18 +90,54 @@ gravel_clean <- gravel_cleanWeightFix %>%
   select(-RawMetabolicRate, -RawMetabolicRateUnits)
 
 gravel_clean <- gravel_clean %>%
-  rename(MRRawMgPerKgPerH = ConvertedValues) %>%   # Rename the column
-  select(ScientificName, Family, CommonName, TeleostOrElasmo, 
-         MRRawMgPerKgPerH, MRRawDataOrMean, BodyMassInGrams, MassRawDataOrMean)  # Rearrange the columns
+  rename(mr_raw_mg_per_kg_per_h = ConvertedValues ,
+         family = Family, 
+         common_name = CommonName, 
+         teleost_or_elasmo = TeleostOrElasmo, 
+         mr_raw_data_or_mean = MRRawDataOrMean, 
+         body_mass_in_grams = BodyMassInGrams, 
+         mass_raw_data_or_mean = MassRawDataOrMean,
+         scientific_name = ScientificName) %>%   # Rename the columns to snakecase 
+  select(scientific_name, family, common_name, teleost_or_elasmo, 
+         mr_raw_mg_per_kg_per_h, mr_raw_data_or_mean, body_mass_in_grams, 
+         mass_raw_data_or_mean) # Rearrange the columns
 
 # View the updated dataset
 print(gravel_clean)
 
 #scatterplot#
-ggplot(gravel_clean, aes(x = BodyMassInGrams, y = MRRawMgPerKgPerH)) +
+ggplot(gravel_clean, aes(x = body_mass_in_grams, y = mr_raw_mg_per_kg_per_h)) +
   geom_point(alpha = 0.3, size = 5) +  # Add points to the plot
   labs(x = "Body Mass (grams)",
        y = "MR Raw (mg O2 kg^-1 h^-1)") +
   theme_minimal() +  # Use a minimal theme for better aesthetics
   theme(title.text = element_text(size = 12), axis.text = element_text(size = 12), 
         axis.title.x = element_text(size = 14), axis.title.y = element_text(size = 14))
+
+### Fishbase trophic position data:
+
+# reading excel data and cleaning up names
+df <- read_xlsx("trophic_position.xlsx") %>% 
+  clean_names()
+
+# cleaning up trophic position column
+df2 <- df %>%
+  separate(trophic_level, into = c("trophic_position", "extra"), sep = "\\+") %>%
+  mutate(trophic_position = trimws(trophic_position, which = "both")) %>%
+  mutate(trophic_position = gsub("[^0-9.]", "", trophic_position)) %>%   # Remove non-numeric characters, allowing for decimals
+  mutate(tro = as.numeric(trophic_position))   # Convert to numeric
+
+# cleaning up standard error column
+trophic_data <- df2 %>% 
+  select(scientific_name, family, tro, extra) %>%
+  mutate(extra = str_extract(extra, "\\d\\.\\d{1,2}")) %>% 
+  rename(trophic_position = tro, tro_standard_error = extra) %>% 
+  mutate(tro_standard_error = as.numeric(tro_standard_error))
+
+str(trophic_data)
+
+### Joining datasets
+
+combined_data <- left_join(gravel_clean, trophic_data, by = "scientific_name") %>% 
+  select(-family.y) %>% 
+  rename(family = family.x)
