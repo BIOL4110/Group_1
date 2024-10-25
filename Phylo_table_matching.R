@@ -8,7 +8,7 @@ combined_data <- read_csv("combined_data.csv")
 View(combined_data)
 
 # Read rmaxAS tree
-pruned_fish_tree_rmaxAS_ms <- read.tree("C:\\Users\\emmab\\Documents\\BIOL4110\\Group_1\\pruned_fish_tree_rmaxAS_ms.tre")
+pruned_fish_tree_rmaxAS_ms <- read.tree("pruned_fish_tree_rmaxAS_ms.tre")
 
 # Extract species names from both sources
 csv_species <- combined_data$scientific_name
@@ -32,7 +32,7 @@ if (length(missing_in_tree_rmaxAS_ms) == 0 && length(extra_in_tree_rmaxAS_ms) ==
 }
 
 # Read rmax MMR tree
-pruned_fish_tree_rmaxMMR_ms <- read.tree("C:\\Users\\emmab\\Documents\\BIOL4110\\Group_1\\pruned_fish_tree_rmaxMMR_ms.tre")
+pruned_fish_tree_rmaxMMR_ms <- read.tree("pruned_fish_tree_rmaxMMR_ms.tre")
 
 # Extract species names from tree
 tree_species_rmaxMMR_ms <- pruned_fish_tree_rmaxMMR_ms$tip.label
@@ -55,7 +55,7 @@ if (length(missing_in_tree_rmaxMMR_ms) == 0 && length(extra_in_tree_rmaxMMR_ms) 
 }
 
 # Read rmax RMR tree
-pruned_fish_tree_rmaxRMR_ms <- read.tree("C:\\Users\\emmab\\Documents\\BIOL4110\\Group_1\\pruned_fish_tree_rmaxRMR_ms.tre")
+pruned_fish_tree_rmaxRMR_ms <- read.tree("pruned_fish_tree_rmaxRMR_ms.tre")
 
 # Extract species names from tree
 tree_species_rmaxRMR_ms <- pruned_fish_tree_rmaxRMR_ms$tip.label
