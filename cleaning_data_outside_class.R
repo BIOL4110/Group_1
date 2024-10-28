@@ -50,36 +50,54 @@ ggplot(combined_clean_data, aes(x = mr_raw_mg_per_kg_per_h)) +
   labs(title = "Histogram of Metabolic Rate", x = "Metabolic Rate", y = "Frequency") +
   theme_minimal()
 
-
-
-# Remove rows with mr_raw_mg_per_kg_per_h equal to 1258240.0000
-combined_clean_data <- combined_clean_data[combined_clean_data$mr_raw_mg_per_kg_per_h != 1258240.0000, ]
-
-# Apply IQR outlier detection to each numeric column
-outliers_list <- lapply(combined_clean_data[, sapply(combined_clean_data, is.numeric)], function(column) {
-  Q1 <- quantile(column, 0.25, na.rm = TRUE)
-  Q3 <- quantile(column, 0.75, na.rm = TRUE)
+# Apply IQR outlier detection to each column
+outliers_list <- lapply(df[ , sapply(df, is.numeric)], function(column) {
+  Q1 <- quantile(column, 0.25)
+  Q3 <- quantile(column, 0.75)
   IQR_value <- Q3 - Q1
   lower_bound <- Q1 - 1.5 * IQR_value
   upper_bound <- Q3 + 1.5 * IQR_value
-  outliers <- column[column < lower_bound | column > upper_bound]
-  
-  # Return outliers with their column name
-  return(outliers)
+  column[column < lower_bound | column > upper_bound]
 })
 
 # Print outliers for each column
-print(outliers_list)
+outliers_list
+
+### Removing Outliers from just the metabolic rate column
+# Step 1: Identify outliers in "mr_raw_mg_per_kg_per_h" column
+mr_raw_column <- combined_clean_data$mr_raw_mg_per_kg_per_h
+Q1 <- quantile(mr_raw_column, 0.25)
+Q3 <- quantile(mr_raw_column, 0.75)
+IQR_value <- Q3 - Q1
+lower_bound <- Q1 - 1.5 * IQR_value
+upper_bound <- Q3 + 1.5 * IQR_value
+
+# Step 2: Find rows with outliers in "mr_raw_mg_per_kg_per_h"
+outliers <- combined_clean_data$mr_raw_mg_per_kg_per_h < lower_bound | combined_clean_data$mr_raw_mg_per_kg_per_h > upper_bound
+
+# Step 3: Create a new dataset without those rows
+outliers_removed_data <- combined_clean_data[!outliers, ]
+
+# View the new dataset without outliers in "mr_raw_mg_per_kg_per_h"
+print(outliers_removed_data)
+
+outliers_removed_data <- subset(
+  combined_clean_data,
+  mr_raw_mg_per_kg_per_h >= lower_bound & mr_raw_mg_per_kg_per_h <= upper_bound
+)
+View(outliers_removed_data)
+
+# ggplot2 histogram
+ggplot(outliers_removed_data, aes(x = mr_raw_mg_per_kg_per_h)) +
+  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
+  labs(title = "Histogram of Metabolic Rate (No Outliers)",
+       x = "Metabolic Rate (mg/kg/h)",
+       y = "Frequency")
 
 
-# Remove rows with mr_raw_mg_per_kg_per_h equal to 1258240.0000
-data_no_mmr_outliers <- combined_clean_data[combined_clean_data$mr_raw_mg_per_kg_per_h >= 755, ]
 
-# Create the histogram for Metabolic Rate
-ggplot(data_no_mmr_outliers, aes(x = mr_raw_mg_per_kg_per_h)) +
-  geom_histogram(binwidth = 1.0, fill = "blue", color = "black") +
-  labs(title = "Histogram of Metabolic Rate", x = "Metabolic Rate", y = "Frequency") +
-  theme_minimal()
+
+
 
 
 
