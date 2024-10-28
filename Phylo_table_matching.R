@@ -77,6 +77,16 @@ if (length(missing_in_tree_rmaxRMR_ms) == 0 && length(extra_in_tree_rmaxRMR_ms) 
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
+
+
+
+
+
+
+
+
+
+
 # Read cleaned csv file
 combined_clean_data <- read_csv("combined_clean_data.csv")
 View(combined_clean_data)
@@ -134,3 +144,24 @@ if (length(missing_in_tree_rmaxRMR_ms_cleaned) == 0 && length(extra_in_tree_rmax
 } else {
   cat("There are mismatches between the CSV and the tree.\n")
 }
+
+
+
+
+
+# Combine all tree species into one vector and remove duplicates
+all_tree_species <- unique(c(tree_species_rmaxRMR_ms, tree_species_rmaxMMR_ms, tree_species_rmaxAS_ms))
+print(all_tree_species)
+
+# Check if each species in the CSV is present in at least one of the trees
+matches <- csv_clean_species[csv_clean_species %in% all_tree_species]
+
+# Find species in the CSV that are NOT in any of the trees
+mismatches <- setdiff(csv_clean_species, all_tree_species)
+
+# Print results
+cat("Species found in at least one of the phylogenetic trees:\n")
+print(matches)
+cat("\nSpecies not found in any of the phylogenetic trees:\n")
+print(mismatches)
+
