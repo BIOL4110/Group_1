@@ -72,7 +72,14 @@ outliers_list <- lapply(combined_clean_data[, sapply(combined_clean_data, is.num
 print(outliers_list)
 
 
+# Remove rows with mr_raw_mg_per_kg_per_h equal to 1258240.0000
+data_no_mmr_outliers <- combined_clean_data[combined_clean_data$mr_raw_mg_per_kg_per_h >= 755, ]
 
+# Create the histogram for Metabolic Rate
+ggplot(data_no_mmr_outliers, aes(x = mr_raw_mg_per_kg_per_h)) +
+  geom_histogram(binwidth = 1.0, fill = "blue", color = "black") +
+  labs(title = "Histogram of Metabolic Rate", x = "Metabolic Rate", y = "Frequency") +
+  theme_minimal()
 
 
 
