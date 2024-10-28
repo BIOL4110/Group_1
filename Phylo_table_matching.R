@@ -7,8 +7,17 @@ library(readr) # for reading csv files
 combined_data <- read_csv("combined_data.csv")
 View(combined_data)
 
-# Read rmaxAS tree
+# Read rmax AS tree
 pruned_fish_tree_rmaxAS_ms <- read.tree("pruned_fish_tree_rmaxAS_ms.tre")
+# Read rmax MMR tree
+pruned_fish_tree_rmaxMMR_ms <- read.tree("pruned_fish_tree_rmaxMMR_ms.tre")
+# Read rmax RMR tree
+pruned_fish_tree_rmaxRMR_ms <- read.tree("pruned_fish_tree_rmaxRMR_ms.tre")
+
+# Visualize the phylogenetic trees #
+plot(pruned_fish_tree_rmaxMMR_ms)
+plot(pruned_fish_tree_rmaxRMR_ms)
+plot(pruned_fish_tree_rmaxAS_ms)
 
 # Extract species names from both sources
 csv_species <- combined_data$scientific_name
@@ -31,10 +40,7 @@ if (length(missing_in_tree_rmaxAS_ms) == 0 && length(extra_in_tree_rmaxAS_ms) ==
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
-# Read rmax MMR tree
-pruned_fish_tree_rmaxMMR_ms <- read.tree("pruned_fish_tree_rmaxMMR_ms.tre")
-
-# Extract species names from tree
+# Extract species names from tree MMR
 tree_species_rmaxMMR_ms <- pruned_fish_tree_rmaxMMR_ms$tip.label
 
 # Compare species lists MMR to combined
@@ -54,10 +60,7 @@ if (length(missing_in_tree_rmaxMMR_ms) == 0 && length(extra_in_tree_rmaxMMR_ms) 
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
-# Read rmax RMR tree
-pruned_fish_tree_rmaxRMR_ms <- read.tree("pruned_fish_tree_rmaxRMR_ms.tre")
-
-# Extract species names from tree
+# Extract species names from tree RMR
 tree_species_rmaxRMR_ms <- pruned_fish_tree_rmaxRMR_ms$tip.label
 
 # Compare species lists RMR to combined
@@ -165,3 +168,14 @@ print(matches)
 cat("\nSpecies not found in any of the phylogenetic trees:\n")
 print(mismatches)
 
+
+
+
+
+csv_clean_unique_species <- unique(csv_clean_species)
+matches_unique <- csv_clean_unique_species[csv_clean_unique_species %in% all_tree_species]
+mismatches_unique <- setdiff(csv_clean_unique_species, all_tree_species)
+cat("Species found in at least one of the phylogenetic trees:\n")
+print(matches_unique)
+cat("\nSpecies not found in any of the phylogenetic trees:\n")
+print(mismatches_unique)
