@@ -12,7 +12,7 @@ library(tidyr)
 combined_data <- read_csv("combined_data.csv")
 View(combined_data)
 
-# Assuming combined_data is your dataset
+# removing upper case letters and adding "_"
 combined_clean_data <- combined_data %>%
   clean_names() %>%                # Clean column names
   mutate(across(everything(), ~ str_replace_all(., " ", "_"))) %>%  # Replace spaces with underscores
@@ -25,6 +25,11 @@ View(combined_clean_data)
 combined_clean_data <- na.omit(combined_clean_data)
 View(combined_clean_data)
 
+#make sure everything is numeric
+combined_clean_data$trophic_position <- as.numeric(as.character(combined_clean_data$trophic_position))
+combined_clean_data$tro_standard_error <- as.numeric(as.character(combined_clean_data$tro_standard_error))
+combined_clean_data$body_mass_in_grams <- as.numeric(as.character(combined_clean_data$body_mass_in_grams))
+combined_clean_data$mr_raw_mg_per_kg_per_h <- as.numeric(as.character(combined_clean_data$mr_raw_mg_per_kg_per_h))
 
 # Create the histogram for trophic position
 ggplot(combined_clean_data, aes(x = trophic_position)) +
@@ -66,28 +71,7 @@ outliers_list <- lapply(combined_clean_data[, sapply(combined_clean_data, is.num
 # Print outliers for each column
 print(outliers_list)
 
-outliers_removed_data <- subset(
-  combined_clean_data,
-  mr_raw_mg_per_kg_per_h >= lower_bound & mr_raw_mg_per_kg_per_h <= upper_bound
-)
 
-# Create the histogram for trophic position
-ggplot(outliers_removed_data, aes(x = trophic_position)) +
-  geom_histogram(binwidth = 0.5, fill = "blue", color = "black") +
-  labs(title = "Histogram of Trophic Position", x = "Trophic Position", y = "Frequency") +
-  theme_minimal()
-
-# Create the histogram for body mass
-ggplot(outliers_removed_data, aes(x = body_mass_in_grams)) +
-  geom_histogram(binwidth = 0.5, fill = "blue", color = "black") +
-  labs(title = "Histogram of Body Mass", x = "Body Mass", y = "Frequency") +
-  theme_minimal()
-
-# Create the histogram for Metabolic Rate
-ggplot(outliers_removed_data, aes(x = mr_raw_mg_per_kg_per_h)) +
-  geom_histogram(binwidth = 1.0, fill = "blue", color = "black") +
-  labs(title = "Histogram of Metabolic Rate", x = "Metabolic Rate", y = "Frequency") +
-  theme_minimal()
 
 
 
