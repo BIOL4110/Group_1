@@ -10,8 +10,11 @@ library(readxl)
 ### Gravel et al. data:
 
 #load dataset
-gravel_dataset <- read_csv("gravel_dataset.csv")
+gravel_dataset <- read_csv("gravel_dataset.csv") %>% 
+  mutate(unique_id = row.names(.))
 View(gravel_dataset)
+
+
 
 #view data#
 str(gravel_dataset)
@@ -21,7 +24,7 @@ print(column_names)
 #clean datasets#
 gravel_clean <- gravel_dataset %>%
   select(-ScientificNamePopID, -SerenaOrSarah, TeleostOrElasmo, -MROriginLocation, -SampleSize, -RawMetabolicRateCitation, -Temperature, -TemperatureUnits, -FactorialAerobicScope, -binTemp, )
-print(gravel_clean)
+View(gravel_clean)
 
 # Convert all weights to grams
 gravel_WeightFix <- gravel_clean %>%
@@ -87,7 +90,7 @@ gravel_cleanWeightFix$ConvertedValues <- mapply(
 )
 
 gravel_clean <- gravel_cleanWeightFix %>%
-  select(-RawMetabolicRate, -RawMetabolicRateUnits)
+  select(-RawMetabolicRate)
 
 gravel_clean <- gravel_clean %>%
   rename(mr_raw_mg_per_kg_per_h = ConvertedValues ,
@@ -99,11 +102,11 @@ gravel_clean <- gravel_clean %>%
          mass_raw_data_or_mean = MassRawDataOrMean,
          scientific_name = ScientificName) %>%   # Rename the columns to snakecase 
   select(scientific_name, family, common_name, teleost_or_elasmo, 
-         mr_raw_mg_per_kg_per_h, mr_raw_data_or_mean, body_mass_in_grams, 
+         mr_raw_mg_per_kg_per_h, mr_raw_data_or_mean, body_mass_in_grams, unique_id, RawMetabolicRateUnits, 
          mass_raw_data_or_mean) # Rearrange the columns
 
 # View the updated dataset
-print(gravel_clean)
+View(gravel_clean)
 
 #scatterplot#
 ggplot(gravel_clean, aes(x = body_mass_in_grams, y = mr_raw_mg_per_kg_per_h)) +

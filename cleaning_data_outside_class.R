@@ -43,11 +43,16 @@ ggplot(combined_clean_data, aes(x = body_mass_in_grams)) +
   labs(title = "Histogram of Body Mass", x = "Body Mass", y = "Frequency") +
   theme_minimal()
 
+# Remove rows with mr_raw_mg_per_kg_per_h equal to 1258240.0000
+data_no_mmr_outliers <- combined_clean_data[combined_clean_data$mr_raw_mg_per_kg_per_h != 1258240.0000, ]
+
 # Create the histogram for Metabolic Rate
-ggplot(combined_clean_data, aes(x = mr_raw_mg_per_kg_per_h)) +
-  geom_histogram(binwidth = 1.0, fill = "blue", color = "black") +
+ggplot(data_no_mmr_outliers, aes(x = mr_raw_mg_per_kg_per_h)) +
+  geom_histogram(binwidth = 5.0, fill = "blue", color = "black") +
   labs(title = "Histogram of Metabolic Rate", x = "Metabolic Rate", y = "Frequency") +
   theme_minimal()
+
+
 
 # Apply IQR outlier detection to each column
 outliers_list <- lapply(df[ , sapply(df, is.numeric)], function(column) {
