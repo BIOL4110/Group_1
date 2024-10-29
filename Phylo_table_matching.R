@@ -86,16 +86,16 @@ if (length(missing_in_tree_rmaxRMR_ms) == 0 && length(extra_in_tree_rmaxRMR_ms) 
 
 
 
-
+library(readr)
 
 
 
 # Read cleaned csv file
-combined_clean_data <- read_csv("combined_clean_data.csv")
-View(combined_clean_data)
+outliers_removed_data <- read_csv("outliers_removed_data.csv")
+View(outliers_removed_data)
 
 # Extract species names from both sources
-csv_clean_species <- combined_clean_data$scientific_name
+csv_clean_species <- outliers_removed_data$scientific_name
 
 # Compare species lists AS to cleaned
 # Species in CSV but not in the tree
@@ -171,10 +171,14 @@ print(mismatches)
 
 
 
-
+# remove any duplicates from csv
 csv_clean_unique_species <- unique(csv_clean_species)
+#check if each species in the csv is present in at least one of the trees
 matches_unique <- csv_clean_unique_species[csv_clean_unique_species %in% all_tree_species]
+# Find species in the CSV that are NOT in any of the trees
 mismatches_unique <- setdiff(csv_clean_unique_species, all_tree_species)
+
+# Print results
 cat("Species found in at least one of the phylogenetic trees:\n")
 print(matches_unique)
 cat("\nSpecies not found in any of the phylogenetic trees:\n")

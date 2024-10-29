@@ -43,7 +43,6 @@ ggplot(combined_clean_data, aes(x = body_mass_in_grams)) +
   labs(title = "Histogram of Body Mass", x = "Body Mass", y = "Frequency") +
   theme_minimal()
 
-
 # Create the histogram for Metabolic Rate
 ggplot(combined_clean_data, aes(x = mr_raw_mg_per_kg_per_h)) +
   geom_histogram(binwidth = 1.0, fill = "blue", color = "black") +
@@ -72,10 +71,10 @@ IQR_value <- Q3 - Q1
 lower_bound <- Q1 - 1.5 * IQR_value
 upper_bound <- Q3 + 1.5 * IQR_value
 
-# Step 2: Find rows with outliers in "mr_raw_mg_per_kg_per_h"
+# Find rows with outliers in "mr_raw_mg_per_kg_per_h"
 outliers <- combined_clean_data$mr_raw_mg_per_kg_per_h < lower_bound | combined_clean_data$mr_raw_mg_per_kg_per_h > upper_bound
 
-# Step 3: Create a new dataset without those rows
+# Create a new dataset without those rows
 outliers_removed_data <- combined_clean_data[!outliers, ]
 
 # View the new dataset without outliers in "mr_raw_mg_per_kg_per_h"
@@ -93,6 +92,10 @@ ggplot(outliers_removed_data, aes(x = mr_raw_mg_per_kg_per_h)) +
   labs(title = "Histogram of Metabolic Rate (No Outliers)",
        x = "Metabolic Rate (mg/kg/h)",
        y = "Frequency")
+
+
+write.csv(outliers_removed_data, "outliers_removed_data.csv", row.names = FALSE)
+
 
 
 
