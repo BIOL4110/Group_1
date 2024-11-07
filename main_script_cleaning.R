@@ -1,6 +1,8 @@
 library(readxl)
 library(readr)
 library(janitor)
+library(dplyr)
+library(stringr)
 
 FULL_Rmax_LHT_MR_ms <- read_csv("FULL_Rmax_LHT_MR_ms.csv")
 View(FULL_Rmax_LHT_MR_ms)
