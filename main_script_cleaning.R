@@ -35,6 +35,9 @@ View(main_dataset2)
 trophic_position_clean <- read_csv("trophic_position_clean.csv")
 View(trophic_position_clean)
 
+trophic_position_clean <- trophic_position_clean %>%
+  mutate(scientific_name = gsub(" ", "_", scientific_name))
+
 main_dataset3 <- left_join(main_dataset2, trophic_position_clean, by = "scientific_name")
 View(main_dataset3)
-str(main_dataset3) #why is it all NA????????
+str(main_dataset3) 
