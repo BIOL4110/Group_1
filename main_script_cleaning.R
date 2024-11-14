@@ -38,6 +38,10 @@ View(trophic_position_clean)
 trophic_position_clean <- trophic_position_clean %>%
   mutate(scientific_name = gsub(" ", "_", scientific_name))
 
+## adding underscores to match main_dataset2
+trophic_position_clean <- trophic_position_clean %>%
+  mutate(scientific_name = gsub(" ", "_", scientific_name))
+
 main_dataset3 <- left_join(main_dataset2, trophic_position_clean, by = "scientific_name")
 View(main_dataset3)
 str(main_dataset3) 
