@@ -1,11 +1,24 @@
-library(ggplot2)
+#load libraries
+library(janitor)
+library(lubridate)
 library(readr)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(purrr)
+library(tidyr)
+
 
 ## load data 
-main_dataset3 <- read_csv("main_dataset3.csv")
+# load csv file
+main_dataset3 <- read_csv("processed_data/main_dataset3.csv")
+View(main_dataset3)
 
 # Check the data type of the column
 str(main_dataset3$whole_organism_mr_watts)
+
+#remove na values
+main_dataset3 <- na.omit(main_dataset3)
 
 # Convert MR to numeric
 main_dataset3$whole_organism_mr_watts <- as.numeric(as.character(main_dataset3$whole_organism_mr_watts))
