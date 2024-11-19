@@ -34,3 +34,25 @@ ggplot(main_dataset3, aes(x = log_whole_organism_mr_watts)) +
   geom_histogram(binwidth = 0.5, fill = "lightblue", color = "black") +
   labs(title = "Histogram of MR", x = "MR", y = "Frequency") +
   theme_minimal()
+
+
+
+
+
+
+
+
+
+# Create the histogram for trophic position
+ggplot(main_dataset3, aes(x = trophic_position)) +
+  geom_histogram(binwidth = 0.5, fill = "blue", color = "black") +
+  labs(title = "Histogram of Trophic Position", x = "Trophic Position", y = "Frequency") +
+  theme_minimal()
+
+# Create the histogram for body mass
+ggplot(main_dataset3, aes(x = mr_mass_grams)) +
+  geom_histogram(binwidth = 0.5, fill = "blue", color = "black") +
+  labs(title = "Histogram of Body Mass", x = "Body Mass", y = "Frequency") +
+  theme_minimal()
+
+
