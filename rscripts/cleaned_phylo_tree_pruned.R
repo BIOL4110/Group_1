@@ -69,3 +69,5 @@ if (length(missing_in_tree_pruned) == 0 && length(extra_in_tree_pruned) == 0) {
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
+#save tree
+write.tree(pruned_tree, "processed_data/pruned_fish_tree.tre")
