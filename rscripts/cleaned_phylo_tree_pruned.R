@@ -4,26 +4,26 @@ library(ape)  # For reading tree files
 library(dplyr) # For data manipulation
 
 # Read csv file
-main_dataset3 <- read_csv("processed_data/main_dataset3.csv")
+main_dataset4 <- read_csv("processed_data/main_dataset4.csv")
 View(main_dataset3)
 
 # Load supertree (full teleost chronogram and the chondro subset)
 tree_all <- read.tree("phylogenetic_trees/fullTeleostChrono_wChondroSubset.tre")
 
 # Update some sp names in supertree:
-treeAll$tip.label[tree_all$tip.label== "Dasyatis_lata"] <- "Bathytoshia_lata"
-treeAll$tip.label[tree_all$tip.label== "Dasyatis_sabina"] <- "Hypanus_sabinus"
-treeAll$tip.label[tree_all$tip.label== "Dasyatis_americana"] <- "Hypanus_americanus"
-treeAll$tip.label[tree_all$tip.label== "Myliobatis_californicus"] <- "Myliobatis_californica"
-treeAll$tip.label[tree_all$tip.label== "Raja_eglanteria"] <- "Rostroraja_eglanteria"
-treeAll$tip.label[tree_all$tip.label=="Theragra_chalcogramma"] <- "Gadus_chalcogrammus"
-treeAll$tip.label[tree_all$tip.label=="Chrysophrys_major"] <- "Pagrus_major"
-treeAll$tip.label[tree_all$tip.label=="Chrysophrys_auratus"] <- "Pagrus_auratus"
-treeAll$tip.label[tree_all$tip.label=="Clupea_pallasii_pallasii"] <- "Clupea_pallasii"
+tree_all$tip.label[tree_all$tip.label== "Dasyatis_lata"] <- "Bathytoshia_lata"
+tree_all$tip.label[tree_all$tip.label== "Dasyatis_sabina"] <- "Hypanus_sabinus"
+tree_all$tip.label[tree_all$tip.label== "Dasyatis_americana"] <- "Hypanus_americanus"
+tree_all$tip.label[tree_all$tip.label== "Myliobatis_californicus"] <- "Myliobatis_californica"
+tree_all$tip.label[tree_all$tip.label== "Raja_eglanteria"] <- "Rostroraja_eglanteria"
+tree_all$tip.label[tree_all$tip.label=="Theragra_chalcogramma"] <- "Gadus_chalcogrammus"
+tree_all$tip.label[tree_all$tip.label=="Chrysophrys_major"] <- "Pagrus_major"
+tree_all$tip.label[tree_all$tip.label=="Chrysophrys_auratus"] <- "Pagrus_auratus"
+tree_all$tip.label[tree_all$tip.label=="Clupea_pallasii_pallasii"] <- "Clupea_pallasii"
 
 
 # Extract species names from both sources
-csv_species <- main_dataset3$scientific_name
+csv_species <- main_dataset4$scientific_name
 tree_species_tree_all <- tree_all$tip.label
 
 # Compare species is csv to tree
@@ -70,6 +70,6 @@ if (length(missing_in_tree_pruned) == 0 && length(extra_in_tree_pruned) == 0) {
 }
 
 #save tree
-write.tree(pruned_tree, "phylogenetic_trees/pruned_fish_tree.tre")
+write.tree(pruned_tree, "/pruned_fish_tree.tre")
 
 
