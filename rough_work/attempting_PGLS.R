@@ -50,16 +50,6 @@ mod1p <- phylolm(avg_mr ~ avg_trophic_position + avg_mass,
 # Summarize the model output
 summary(mod1p)
 
-unique(transDF_ordered$avg_trophic_position)
-
-library(caper)
-
-comparative_data <- comparative.data(pruned_tree, trait_data, species, vcv=TRUE)
-model <- pgls(trophic_position ~ metabolic_rate, comparative_data)
-
-
-
-
 
 
 
