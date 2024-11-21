@@ -70,4 +70,6 @@ if (length(missing_in_tree_pruned) == 0 && length(extra_in_tree_pruned) == 0) {
 }
 
 #save tree
-write.tree(pruned_tree, "processed_data/pruned_fish_tree.tre")
+write.tree(pruned_tree, "phylogenetic_trees/pruned_fish_tree.tre")
+
+
