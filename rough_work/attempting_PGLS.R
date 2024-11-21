@@ -50,6 +50,9 @@ mod1p <- phylolm(avg_mr ~ avg_trophic_position + avg_mass,
 # Summarize the model output
 summary(mod1p)
 
+#phylogenetic signal
+trait_m <- as.matrix((transDF_2)[,c("avg_mr")])
+phylosig(pruned_tree, trait_m, method = "lambda")
 
 
 
