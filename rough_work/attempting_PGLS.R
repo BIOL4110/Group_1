@@ -54,7 +54,36 @@ summary(mod1p)
 trait_m <- as.matrix((transDF_2)[,c("avg_mr")])
 phylosig(pruned_tree, trait_m, method = "lambda")
 
+library(phytools)
 
+# Ensure that the species names match between tree and trait data
+trait_data <- trait_data[trait_data$scientific_name %in% tree$tip.label, ]
 
+transDF_avg <- transDF_taxa_removed %>%
+  group_by(scientific_name) %>%
+  summarise(
+    scientific_name = first(scientific_name),  # Retains the scientific_name
+    avg_mr = mean(std_whole_organism_mr_watts_fourth, na.rm = TRUE),
+    avg_trophic_position = mean(std_trophic_position, na.rm = TRUE),
+    avg_mass = mean(std_mass_fourth_root, na.rm = TRUE)
+  )
 
+# Select the numeric trait (e.g., avg_mr) for visualization
+x <- transDF_ordered$avg_mr 
 
+# Visualize the trait distribution across the tree
+plotBranchbyTrait(pruned_tree, 
+                  x,  # Pass the correctly defined 'x' (avg_mr)
+                  mode = c("edges", "tips", "nodes"),  
+                  palette = "rainbow",                 
+                  legend = TRUE,                      
+                  xlims = c(min(x, na.rm = TRUE), max(x, na.rm = TRUE)),  
+                  main = "Trait Distribution Across Tree", 
+                  xlab = "Trait Value",           
+                  ylab = "Tree Branch",      
+                  branch.length = TRUE,                
+                  cex.legend = 0.8) +
+  theme(legend.position = "bottom", 
+        legend.text = element_text(size = 5),
+        legend.title = element_text(size = 12),
+        legend.key.size = unit(1, "cm"))# Adjust legend size
