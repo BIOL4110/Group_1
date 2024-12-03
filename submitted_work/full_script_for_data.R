@@ -10,9 +10,6 @@ library(ggplot2)
 
 
 
-
-
-
 ### CLEANING ###
 
 
@@ -249,7 +246,7 @@ tree_all$tip.label[tree_all$tip.label=="Clupea_pallasii_pallasii"] <- "Clupea_pa
 
 
 # Extract species names from both sources
-csv_species <- main_dataset4$scientific_name
+csv_species <- main_dataset3$scientific_name
 tree_species_tree_all <- tree_all$tip.label
 
 # Compare species is csv to tree
@@ -295,7 +292,6 @@ if (length(missing_in_tree_pruned) == 0 && length(extra_in_tree_pruned) == 0) {
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
-
 # List of species names to remove
 species_to_remove <- c("Pagrus_auratus", "Rostroraja_eglanteria")
 
@@ -303,6 +299,14 @@ species_to_remove <- c("Pagrus_auratus", "Rostroraja_eglanteria")
 
 transDF_taxa_removed <- transDF[!transDF$scientific_name %in% species_to_remove, ]
 
+
+
+
+
+
+
+
+### PGLS MODELLING ###
 
 
 
