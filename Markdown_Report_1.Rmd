@@ -1,0 +1,56 @@
+---
+title: "Influence of Trophic Position and Body Size on Shark Metabolic Rate"
+date: "2024-12-06"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    collapsed: no
+    smooth_scroll: yes
+---
+Group 1: Emma Booth (1149027), Annika Laurin (1183145), Samantha Mok (1126756), Kayla Perez (1175585), Farah Sadoon (1302190)
+
+## Introduction
+
+## Methods
+- Body mass alone PGLS
+- Trophic position alone PGLS
+- Both together PGLS
+- AIC model on all 3 
+- Build new folder in GitHub without unnecessary steps that can be run through all at once
+- Use trait mapping to solidify ideas found in AIC
+
+insert cleaning data code
+```{r}
+
+```
+
+insert tree making
+```{r}
+
+```
+
+PGLS and OLS
+```{r}
+
+```
+
+## Results
+- Fix line of best fit on graphs
+- Model comparisons
+
+PGLS and OLS results
+```{r}
+
+```
+
+Trait Mapping
+```{r}
+
+```
+
+## Discussion
+
+## References
+
+
