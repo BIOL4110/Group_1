@@ -382,41 +382,29 @@ transDF_ordered <- transDF_avg %>%
   filter(scientific_name %in% pruned_tree$tip.label) %>%
   arrange(match(scientific_name, pruned_tree$tip.label))
 
-<<<<<<< HEAD
 x <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
 
 # Remove NA values from the trait vector
 x <- na.omit(x)
 
-#   Plot tree
+# Plot tree
 plotBranchbyTrait(
   tree = pruned_tree, 
-  x = x, 
-=======
-# plot Average Metabolic Rate
+  x = x) 
+# Plot Average Metabolic Rate
 x_mr <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
 x_mr <- na.omit(x_mr)  # Remove NA values
 trait_mapped_tree_mr <- plotBranchbyTrait(
   pruned_tree, 
   x_mr, 
->>>>>>> b5b7203204b86d8f1379cf00d6c0d25604663be0
   mode = "tips", 
   cols = viridis(100),  
   legend = TRUE,                      
-<<<<<<< HEAD
   xlims = range(x, na.rm = TRUE)
 )
 
 # Add title
 title(main = "Average Metabolic Rate Across Phylogeny")
-=======
-  xlims = c(min(x_mr, na.rm = TRUE), max(x_mr, na.rm = TRUE)), 
-  main = "Average Metabolic Rate Across Phylogeny", 
-  xlab = "Average Metabolic Rate",           
-  ylab = "Tree Branch",      
-  branch.length = TRUE,                
-  cex.legend = 0.8
-)
 
 # plot Average Trophic Position
 x_tp <- setNames(transDF_ordered$avg_trophic_position, transDF_ordered$scientific_name)
@@ -435,6 +423,9 @@ trait_mapped_tree_tp <- plotBranchbyTrait(
   cex.legend = 0.8
 )
 
+# Add title
+title(main = "Average Trophic Position Across Phylogeny")
+
 # plot Average Body Mass
 x_mass <- setNames(transDF_ordered$avg_mass, transDF_ordered$scientific_name)
 x_mass <- na.omit(x_mass)  # Remove NA values
@@ -451,7 +442,9 @@ trait_mapped_tree_mass <- plotBranchbyTrait(
   branch.length = TRUE,                
   cex.legend = 0.8
 )
->>>>>>> b5b7203204b86d8f1379cf00d6c0d25604663be0
+
+# Add title
+title(main = "Average Body Mass Across Phylogeny")
 
 
 
