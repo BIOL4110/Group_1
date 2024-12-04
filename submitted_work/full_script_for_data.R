@@ -399,6 +399,7 @@ ggplot(model_comparison_df, aes(x = delta, y = weight)) +
 
 ### TRAIT MAPPING ###
 
+
 # Compute Phylogenetic Signal
 trait_m <- setNames(as.matrix(transDF_2$avg_mr), transDF_2$scientific_name)
 
