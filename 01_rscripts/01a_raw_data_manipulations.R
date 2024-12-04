@@ -10,7 +10,7 @@ library(readxl)
 ### Gravel et al. data:
 
 #load dataset
-gravel_dataset <- read_csv("gravel_dataset.csv") %>% 
+gravel_dataset <- read_csv("00_raw/00c_gravel_dataset.csv") %>% 
   mutate(unique_id = row.names(.))
 View(gravel_dataset)
 
@@ -120,7 +120,7 @@ ggplot(gravel_clean, aes(x = body_mass_in_grams, y = mr_raw_mg_per_kg_per_h)) +
 ### Fishbase trophic position data:
 
 # reading excel data and cleaning up names
-df <- read_xlsx("trophic_position.xlsx") %>% 
+df <- read_xlsx("00_raw/00e_trophic_position.xlsx") %>% 
   clean_names()
 
 # cleaning up trophic position column

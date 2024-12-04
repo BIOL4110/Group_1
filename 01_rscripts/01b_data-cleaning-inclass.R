@@ -10,7 +10,7 @@ library(readxl)
 ### New approach: cleaning directly from excel, then merge datasets
 
 # reading excel data and cleaning up names
-df <- read_xlsx("trophic_position.xlsx") %>% 
+df <- read_xlsx("00_raw/00e_trophic_position.xlsx") %>% 
   clean_names()
 
 # cleaning up trophic position column

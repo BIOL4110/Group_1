@@ -9,7 +9,7 @@ library(purrr)
 library(tidyr)
 
 # load csv file
-combined_data <- read_csv("combined_data.csv")
+combined_data <- read_csv("rough_work/combined_data.csv")
 View(combined_data)
 
 # removing upper case letters and adding "_"
@@ -99,7 +99,7 @@ ggplot(outliers_removed_data, aes(x = mr_raw_mg_per_kg_per_h)) +
        y = "Frequency")
 
 
-write.csv(outliers_removed_data, "outliers_removed_data.csv", row.names = FALSE) 
+#write.csv(outliers_removed_data, "outliers_removed_data.csv", row.names = FALSE)#
 
 
 
