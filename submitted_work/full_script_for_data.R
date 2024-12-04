@@ -366,8 +366,11 @@ best_models <- get.models(model_comparison, subset = delta < 2)
 # View the best models
 best_models
 
-# Plotting model comparison
-model_comparison_df <- as.data.frame(model_comparison)
+# Remove intercept-only model
+model_comparison_filtered <- model_comparison[!grepl("^1$", rownames(model_comparison)), ]
+
+# Plotting the 3 model comparison
+model_comparison_df <- as.data.frame(model_comparison_filtered)
 
 ggplot(model_comparison_df, aes(x = delta, y = weight)) +
   geom_point(size = 4, aes(color = factor(delta < 2))) +  # Highlights models within delta AIC < 2
