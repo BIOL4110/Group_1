@@ -14,7 +14,7 @@ library(viridis)
 
 
 
-
+-------------------------------------------------------------------------------------
 ### CLEANING ###
 
 
@@ -54,12 +54,7 @@ main_dataset3$mr_mass_grams <- as.numeric(as.character(main_dataset3$mr_mass_gra
 
 
 
-
-
-
-
-
-
+-----------------------------------------------------------------------------------------
 ### TRANSFORMATIONS ###
 
 
@@ -135,16 +130,7 @@ outliers_std_whole_mr
 
 
 
-
-
-
-
-
-
-
-
-
-
+-------------------------------------------------------------------------------------------
 ### OLS MODELLING ###
 
 
@@ -224,14 +210,7 @@ ggplot(transDF, aes(x = ols_trophic_and_mass$fitted.values, y = residuals)) +
 
 
 
-
-
-
-
-
-
-
-
+------------------------------------------------------------------------------------------------
 ### PHYLOGENETIC TREE ###
 
 
@@ -271,7 +250,6 @@ if (length(missing_in_tree_all) == 0 && length(extra_in_tree_all) == 0) {
   cat("There are mismatches between the CSV and the tree.\n")
 }
 
-
 #Prune the tree to match only the tips in csv_species
 pruned_tree <- drop.tip(tree_all, setdiff(tree_all$tip.label, csv_species))
 
@@ -299,12 +277,7 @@ if (length(missing_in_tree_pruned) == 0 && length(extra_in_tree_pruned) == 0) {
 
 
 
-
-
-
-
-
-
+-------------------------------------------------------------------------------------
 ### PGLS MODELLING ###
 
 
@@ -382,17 +355,7 @@ ggplot(model_comparison_df, aes(x = delta, y = weight)) +
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+--------------------------------------------------------------------------------------------
 
 ### TRAIT MAPPING ###
 
@@ -420,19 +383,37 @@ x <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
 # Remove NA values from the trait vector
 x <- na.omit(x)
 
-# plot tree
-trait_mapped_tree <- plotBranchbyTrait(
-  pruned_tree, 
-  x, 
+#   Plot tree
+plotBranchbyTrait(
+  tree = pruned_tree, 
+  x = x, 
   mode = "tips", 
-  cols = viridis::viridis(100),  
+  cols = viridis(100),  
   legend = TRUE,                      
-  xlims = c(min(x, na.rm = TRUE), max(x, na.rm = TRUE)),  
-  main = "Average Metabolic Rate Across Phylogeny",  
-  xlab = "Average Metabolic Rate",           
-  ylab = "Tree Branch",      
-  branch.length = TRUE,                
-  cex.legend = 0.8
+  xlims = range(x, na.rm = TRUE)
 )
 
+# Add title
+title(main = "Average Metabolic Rate Across Phylogeny")
 
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
