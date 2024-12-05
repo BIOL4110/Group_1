@@ -345,8 +345,12 @@ model_comparison_filtered <- model_comparison[!grepl("^1$", rownames(model_compa
 # Plotting the 3 model comparison
 model_comparison_df <- as.data.frame(model_comparison_filtered)
 
+# Add labels for the models
+model_comparison_df$label <- c("BM-only", "Combined", "TP-only")
+
 ggplot(model_comparison_df, aes(x = delta, y = weight)) +
-  geom_point(size = 4, aes(color = factor(delta < 2))) +  # Highlights models within delta AIC < 2
+  geom_point(size = 4, aes(color = factor(delta < 2))) + # Highlights models within delta AIC < 2
+  geom_text(aes(label = label), vjust = -0.8, size = 3) +
   scale_color_manual(values = c("black", "red")) +         # Color best models
   labs(title = "Model Comparison (AICc vs. Weight)",
        x = "Delta AIC", 
