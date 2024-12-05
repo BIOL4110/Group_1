@@ -22,6 +22,60 @@ Group 1: Emma Booth (1149027), Annika Laurin (1183145), Samantha Mok (1126756), 
 
 insert cleaning data code
 ```{r}
+#load libraries
+library(readxl)
+library(readr)
+library(janitor)
+library(dplyr)
+library(stringr)
+library(ape)
+library(ggplot2)
+library(phylolm)
+library(phytools)
+library(tidyverse)
+library(MuMIn)
+library(viridis)
+library(gridExtra)
+
+
+
+-------------------------------------------------------------------------------------
+### CLEANING ###
+
+
+FULL_Rmax_LHT_MR_ms <- read_csv("00_raw/00b_FULL_Rmax_LHT_MR_ms.csv")
+
+# find column names
+str(FULL_Rmax_LHT_MR_ms)
+column_names <- names(FULL_Rmax_LHT_MR_ms)
+
+# clean datasets
+main_dataset1 <- FULL_Rmax_LHT_MR_ms %>%
+  select(-TeleostOrElasmo, -MROriginLocation, -MRCitation, -DFtype )
+
+# Convert column names to snake case
+colnames(main_dataset1) <- make_clean_names(names(main_dataset1), case = "snake")
+
+# removing upper case letters and adding "_"
+main_dataset2 <- main_dataset1 %>%
+  clean_names() %>%                # Clean column names
+  mutate(across(everything(), ~ str_replace_all(., " ", "_"))) %>%  # Replace spaces with underscores
+  mutate(across(everything(), tolower)) %>%  # Convert all to lowercase
+  mutate(scientific_name = str_to_title(scientific_name))  # Convert scientific_name to title case
+
+### Fishbase trophic position data:
+
+trophic_position_clean <- read_csv("01_processed_datasets/01c_trophic_position_clean.csv")
+
+## adding underscores to match main_dataset2
+trophic_position_clean <- trophic_position_clean %>%
+  mutate(scientific_name = gsub(" ", "_", scientific_name))
+
+
+main_dataset3 <- left_join(main_dataset2, trophic_position_clean, by = "scientific_name")
+str(main_dataset3)
+
+main_dataset3$mr_mass_grams <- as.numeric(as.character(main_dataset3$mr_mass_grams))
 
 ```
 
