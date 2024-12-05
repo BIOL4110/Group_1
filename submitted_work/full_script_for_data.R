@@ -11,6 +11,7 @@ library(phytools)
 library(tidyverse)
 library(MuMIn)
 library(viridis)
+library(gridExtra)
 
 
 
@@ -169,7 +170,7 @@ summary(ols_trophic_and_mass)
 ggplot(transDF, aes(x = std_trophic_position + std_mass_fourth_root, y = std_whole_organism_mr_watts_fourth)) +
   geom_point() +  # Scatter plot of the data points
   geom_smooth(method = "lm", col = "red") +  # Add the regression line
-  labs(title = "Linear Regression: Whole Organism MR vs. Mass (Fourth Root) + Trophic Position",
+  labs(title = "Multiple Linear Regression: Whole Organism MR vs. Mass (Fourth Root) + Trophic Position",
        x = "Mass (Fourth Root) + Trophic Position",
        y = "Whole Organism MR (Fourth Root)") +
   theme_minimal()
@@ -337,6 +338,45 @@ mod3p <- phylolm(avg_mr ~ avg_mass,
 
 # Summarize the model output
 summary(mod1p)
+
+
+# Extract fitted values for the models
+transDF_2$fitted_mod1p <- predict(mod1p)
+transDF_2$fitted_mod2p <- predict(mod2p)
+transDF_2$fitted_mod3p <- predict(mod3p)
+
+
+# Plot for Model 1: Avg MR vs. Avg Troph Pos + Avg Mass
+p1 <- ggplot(transDF_2, aes(x = avg_mass, y = avg_mr)) +
+  geom_point(aes(color = avg_trophic_position), size = 3) +
+  geom_line(aes(y = fitted_mod1p), color = "blue", size = 1) +
+  labs(title = "Model 1: Avg MR vs. Avg Troph Pos + Avg Mass",
+       x = "Average Mass",
+       y = "Average Metabolic Rate",
+       color = "Trophic Position") +
+  theme_minimal()
+
+# Plot for Model 2: Avg MR vs. Avg Troph Pos
+p2 <- ggplot(transDF_2, aes(x = avg_trophic_position, y = avg_mr)) +
+  geom_point(size = 3) +
+  geom_line(aes(y = fitted_mod2p), color = "green", size = 1) +
+  labs(title = "Model 2: Avg MR vs. Avg Troph Pos",
+       x = "Average Trophic Position",
+       y = "Average Metabolic Rate") +
+  theme_minimal()
+
+# Plot for Model 3: Avg MR vs. Avg Mass
+p3 <- ggplot(transDF_2, aes(x = avg_mass, y = avg_mr)) +
+  geom_point(size = 3) +
+  geom_line(aes(y = fitted_mod3p), color = "red", size = 1) +
+  labs(title = "Model 3: Avg MR vs. Avg Mass",
+       x = "Average Mass",
+       y = "Average Metabolic Rate") +
+  theme_minimal()
+
+# Display the 3 plots
+grid.arrange(p1, p2, p3, nrow = 3)
+
 
 # Model comparison using MuMIn: 
 
