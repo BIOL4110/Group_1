@@ -13,12 +13,19 @@ Group 1: Emma Booth (1149027), Annika Laurin (1183145), Samantha Mok (1126756), 
 ## Introduction
 
 ## Methods
-- Body mass alone PGLS
-- Trophic position alone PGLS
-- Both together PGLS
-- AIC model on all 3 
-- Build new folder in GitHub without unnecessary steps that can be run through all at once
-- Use trait mapping to solidify ideas found in AIC
+### 2.1 Data preparation 
+	The necessary libraries for data manipulation, analysis, and visualization were loaded. The raw dataset, FULL_Rmax_LHT_MR_ms.csv, was imported, and unnecessary columns, including TeleostOrElasmo, MROriginLocation, MRCitation, and DFtype, were removed. Column names were standardized to snake case. The cleaned dataset was merged with trophic position data from the online database FishBase using the scientific_name column. Rows with missing values (NA) were removed, and numerical columns were converted to their appropriate data types for further analysis.
+### 2.2 Transformations
+	Performed Shapiro-Wilk tests to assess the normality of columns containing metabolic rate, body mass, and trophic position data. To achieve normality, applied fourth-root transformations to the metabolic rate and body mass variables, followed by standardizing the transformed data using z-scores. Created histograms of metabolic rate, body mass, and trophic position for both raw and transformed data to visually evaluate distributions. Identified outliers in the standardized fourth-root-transformed variables using the interquartile range (IQR) method.
+### 2.3 Ordinary Least Squares (OLS) Modelling
+	A simple linear regression was performed to examine the relationships between standardized whole-organism metabolic rate and standardized trophic position, standardized whole-organism metabolic rate and standardized body mass, and standardized trophic position and standardized body mass. A multiple linear regression was conducted to evaluate the combined effects of standardized trophic position and standardized body mass on standardized whole-organism metabolic rate. Residuals from the multiple regression model were extracted for analysis and visualization. Scatter plots of residuals against standardized trophic position and standardized body mass were created to identify potential patterns and deviations. A diagnostic plot of fitted values versus residuals was generated to assess model assumptions and overall fit.
+### 2.4 Phylogenetic Tree
+	Loaded the full teleost chronogram and the chondro subset phylogenetic tree from the Gravel et al., 2024 dataset. Species names in the phylogenetic tree were updated to correct the nomenclature and match the dataset created in section 2.2. Species names were extracted from both the dataset and the phylogenetic tree, and a comparison was made to identify any mismatches between the two datasets. The phylogenetic tree was then pruned to include only the species present in the dataset.
+### 2.5 Phylogenetic Least Squares (PGLS) Modelling
+Reordered the dataset to align with the order of tree tips by filtering for species present in both the tree and dataset, then arranging the rows according to the sequence of tree tips. Verified the root edge length of the pruned tree and corrected it by setting the value to 0. Fitted three PGLS models: one predicting whole-organism metabolic rate using both trophic position and body mass, another using only trophic position, and a third using only body mass. Performed a model comparison to identify the best models based on delta AIC values.
+### 2.6 Trait Mapping
+Calculated the phylogenetic signal for average whole-organism metabolic rate using the lambda method. Grouped the dataset by species and calculated the mean values for standardized whole-organism metabolic rate, trophic position, and body mass. Created 3 phylogenetic trees with the traits metabolic rate, trophic position, and body mass respectively. 
+
 
 insert cleaning data code
 ```{r}
