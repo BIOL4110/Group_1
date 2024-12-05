@@ -1487,6 +1487,66 @@ on Shark Metabolic Rate</h1>
 
 <p>Group 1: Emma Booth (1149027), Annika Laurin (1183145), Samantha Mok
 (1126756), Kayla Perez (1175585), Farah Sadoon (1302190)</p>
+<p>##Load Libraries</p>
+<pre class="r"><code>library(readxl)
+library(readr)
+library(janitor)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;janitor&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     chisq.test, fisher.test</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(stringr)
+library(ape)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;ape&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     where</code></pre>
+<pre class="r"><code>library(ggplot2)
+library(phylolm)
+library(phytools)</code></pre>
+<pre><code>## Loading required package: maps</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ forcats   1.0.0     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ✖ purrr::map()    masks maps::map()
+## ✖ ape::where()    masks dplyr::where()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(MuMIn)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;MuMIn&#39;:
+##   method         from   
+##   nobs.phylolm   phylolm
+##   logLik.phylolm phylolm</code></pre>
+<pre class="r"><code>library(viridis)</code></pre>
+<pre><code>## Loading required package: viridisLite
+## 
+## Attaching package: &#39;viridis&#39;
+## 
+## The following object is masked from &#39;package:maps&#39;:
+## 
+##     unemp</code></pre>
+<pre class="r"><code>library(gridExtra)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;gridExtra&#39;
+## 
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     combine</code></pre>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 </div>
@@ -1528,6 +1588,112 @@ values for standardized whole-organism metabolic rate, trophic position,
 and body mass. Created 3 phylogenetic trees with the traits metabolic
 rate, trophic position, and body mass respectively.</p>
 <p>insert cleaning data code</p>
+<pre class="r"><code>FULL_Rmax_LHT_MR_ms &lt;- read_csv(&quot;00_raw/00b_FULL_Rmax_LHT_MR_ms.csv&quot;)</code></pre>
+<pre><code>## Rows: 224 Columns: 17
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (9): Family, ScientificName, CommonName, TeleostOrElasmo, Lifestyle, MRO...
+## dbl (8): MRSampleSize, MRMassGrams, MRTempCelcius, WholeOrganismMRWatts, Ama...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code># find column names
+str(FULL_Rmax_LHT_MR_ms)</code></pre>
+<pre><code>## spc_tbl_ [224 × 17] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Family              : chr [1:224] &quot;Rajidae&quot; &quot;Rajidae&quot; &quot;Ammodytidae&quot; &quot;Anoplopomatidae&quot; ...
+##  $ ScientificName      : chr [1:224] &quot;Amblyraja radiata&quot; &quot;Amblyraja radiata&quot; &quot;Ammodytes tobianus&quot; &quot;Anoplopoma fimbria&quot; ...
+##  $ CommonName          : chr [1:224] &quot;Throny skate&quot; &quot;Throny skate&quot; &quot;Lesser sand-eel&quot; &quot;Sablefish&quot; ...
+##  $ TeleostOrElasmo     : chr [1:224] &quot;Elasmo&quot; &quot;Elasmo&quot; &quot;Teleost&quot; &quot;Teleost&quot; ...
+##  $ Lifestyle           : chr [1:224] &quot;Benthic&quot; &quot;Benthic&quot; &quot;Benthic&quot; &quot;Pelagic&quot; ...
+##  $ MROriginLocation    : chr [1:224] &quot;Gulf of Maine&quot; &quot;Gulf of Maine&quot; &quot;Helsingâ\u0088\u009aâ\u0088\u008fr&quot; &quot;Port Orchard, Washington&quot; ...
+##  $ MRSampleSize        : num [1:224] 14 9 7 12 22 7 10 9 7 8 ...
+##  $ MRCitation          : chr [1:224] &quot;Schwieterman, G. D., Crear, D. P., Anderson, B. N., Lavoie, D. R., Sulikowski, J. A., Bushnell, P. G., &amp; Brill,&quot;| __truncated__ &quot;Schwieterman, G. D., Crear, D. P., Anderson, B. N., Lavoie, D. R., Sulikowski, J. A., Bushnell, P. G., &amp; Brill,&quot;| __truncated__ &quot;Behrens, J. W., &amp; Steffensen, J. F. (2007). The effect of hypoxia on behavioural and physiological aspects of l&quot;| __truncated__ &quot;Leeuwis, R. H., Nash, G. W., Sandrelli, R. M., Zanuzzo, F. S., &amp; Gamperl, A. K. (2019). The environmental toler&quot;| __truncated__ ...
+##  $ MRMassGrams         : num [1:224] 1493.6 1276.7 3.5 619 5957.7 ...
+##  $ MRTempCelcius       : num [1:224] 5 13 10 12 25.5 ...
+##  $ WholeOrganismMRWatts: num [1:224] 0.100748 0.163764 0.000946 0.154439 1.256883 ...
+##  $ Amat                : num [1:224] 11 11 1 6.86 15 5 3.2 9.5 6.4 8.5 ...
+##  $ Amax                : num [1:224] 28 28 7 102 28 20 12 27 23.5 25 ...
+##  $ ReproOutput         : num [1:224] 7.5 7.5 24.117 0.606 1.75 ...
+##  $ Rmax                : num [1:224] 0.253 0.253 2.249 0.123 0.117 ...
+##  $ DFtype              : chr [1:224] &quot;BigN&quot; &quot;MeanT&quot; &quot;Both&quot; &quot;Both&quot; ...
+##  $ MRtype              : chr [1:224] &quot;RMR&quot; &quot;RMR&quot; &quot;RMR&quot; &quot;RMR&quot; ...
+##  - attr(*, &quot;spec&quot;)=
+##   .. cols(
+##   ..   Family = col_character(),
+##   ..   ScientificName = col_character(),
+##   ..   CommonName = col_character(),
+##   ..   TeleostOrElasmo = col_character(),
+##   ..   Lifestyle = col_character(),
+##   ..   MROriginLocation = col_character(),
+##   ..   MRSampleSize = col_double(),
+##   ..   MRCitation = col_character(),
+##   ..   MRMassGrams = col_double(),
+##   ..   MRTempCelcius = col_double(),
+##   ..   WholeOrganismMRWatts = col_double(),
+##   ..   Amat = col_double(),
+##   ..   Amax = col_double(),
+##   ..   ReproOutput = col_double(),
+##   ..   Rmax = col_double(),
+##   ..   DFtype = col_character(),
+##   ..   MRtype = col_character()
+##   .. )
+##  - attr(*, &quot;problems&quot;)=&lt;externalptr&gt;</code></pre>
+<pre class="r"><code>column_names &lt;- names(FULL_Rmax_LHT_MR_ms)
+
+# clean datasets
+main_dataset1 &lt;- FULL_Rmax_LHT_MR_ms %&gt;%
+  select(-TeleostOrElasmo, -MROriginLocation, -MRCitation, -DFtype )
+
+# Convert column names to snake case
+colnames(main_dataset1) &lt;- make_clean_names(names(main_dataset1), case = &quot;snake&quot;)
+
+# removing upper case letters and adding &quot;_&quot;
+main_dataset2 &lt;- main_dataset1 %&gt;%
+  clean_names() %&gt;%                # Clean column names
+  mutate(across(everything(), ~ str_replace_all(., &quot; &quot;, &quot;_&quot;))) %&gt;%  # Replace spaces with underscores
+  mutate(across(everything(), tolower)) %&gt;%  # Convert all to lowercase
+  mutate(scientific_name = str_to_title(scientific_name))  # Convert scientific_name to title case
+
+### Fishbase trophic position data:
+
+trophic_position_clean &lt;- read_csv(&quot;01_processed_datasets/01c_trophic_position_clean.csv&quot;)</code></pre>
+<pre><code>## Rows: 540 Columns: 3
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (1): scientific_name
+## dbl (2): trophic_position, tro_standard_error
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>## adding underscores to match main_dataset2
+trophic_position_clean &lt;- trophic_position_clean %&gt;%
+  mutate(scientific_name = gsub(&quot; &quot;, &quot;_&quot;, scientific_name))
+
+
+main_dataset3 &lt;- left_join(main_dataset2, trophic_position_clean, by = &quot;scientific_name&quot;)</code></pre>
+<pre><code>## Warning in left_join(main_dataset2, trophic_position_clean, by = &quot;scientific_name&quot;): Detected an unexpected many-to-many relationship between `x` and `y`.
+## ℹ Row 1 of `x` matches multiple rows in `y`.
+## ℹ Row 137 of `y` matches multiple rows in `x`.
+## ℹ If a many-to-many relationship is expected, set `relationship =
+##   &quot;many-to-many&quot;` to silence this warning.</code></pre>
+<pre class="r"><code>str(main_dataset3)</code></pre>
+<pre><code>## tibble [1,818 × 15] (S3: tbl_df/tbl/data.frame)
+##  $ family                 : chr [1:1818] &quot;rajidae&quot; &quot;rajidae&quot; &quot;rajidae&quot; &quot;rajidae&quot; ...
+##  $ scientific_name        : chr [1:1818] &quot;Amblyraja_radiata&quot; &quot;Amblyraja_radiata&quot; &quot;Amblyraja_radiata&quot; &quot;Amblyraja_radiata&quot; ...
+##  $ common_name            : chr [1:1818] &quot;throny_skate&quot; &quot;throny_skate&quot; &quot;throny_skate&quot; &quot;throny_skate&quot; ...
+##  $ lifestyle              : chr [1:1818] &quot;benthic&quot; &quot;benthic&quot; &quot;benthic&quot; &quot;benthic&quot; ...
+##  $ mr_sample_size         : chr [1:1818] &quot;14&quot; &quot;14&quot; &quot;14&quot; &quot;14&quot; ...
+##  $ mr_mass_grams          : chr [1:1818] &quot;1493.57142857143&quot; &quot;1493.57142857143&quot; &quot;1493.57142857143&quot; &quot;1493.57142857143&quot; ...
+##  $ mr_temp_celcius        : chr [1:1818] &quot;5&quot; &quot;5&quot; &quot;5&quot; &quot;5&quot; ...
+##  $ whole_organism_mr_watts: chr [1:1818] &quot;0.100748481019738&quot; &quot;0.100748481019738&quot; &quot;0.100748481019738&quot; &quot;0.100748481019738&quot; ...
+##  $ amat                   : chr [1:1818] &quot;11&quot; &quot;11&quot; &quot;11&quot; &quot;11&quot; ...
+##  $ amax                   : chr [1:1818] &quot;28&quot; &quot;28&quot; &quot;28&quot; &quot;28&quot; ...
+##  $ repro_output           : chr [1:1818] &quot;7.5&quot; &quot;7.5&quot; &quot;7.5&quot; &quot;7.5&quot; ...
+##  $ rmax                   : chr [1:1818] &quot;0.253487417475029&quot; &quot;0.253487417475029&quot; &quot;0.253487417475029&quot; &quot;0.253487417475029&quot; ...
+##  $ m_rtype                : chr [1:1818] &quot;rmr&quot; &quot;rmr&quot; &quot;rmr&quot; &quot;rmr&quot; ...
+##  $ trophic_position       : num [1:1818] 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 ...
+##  $ tro_standard_error     : num [1:1818] 0.27 0.27 0.27 0.27 0.27 0.27 0.27 0.27 0.27 0.27 ...</code></pre>
+<pre class="r"><code>main_dataset3$mr_mass_grams &lt;- as.numeric(as.character(main_dataset3$mr_mass_grams))</code></pre>
 <p>insert tree making</p>
 <p>PGLS and OLS</p>
 </div>
@@ -1595,6 +1761,7 @@ that body mass is the primary driver of metabolic rate across shark
 species, outperforming trophic position in explaining variation. While
 trophic position had some predictive value when considered alone, its
 influence was minimal when body mass was included.</p>
+<p>Trait Mapping</p>
 </div>
 </div>
 <div id="discussion" class="section level2">
