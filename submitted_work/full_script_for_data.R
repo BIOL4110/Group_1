@@ -365,8 +365,13 @@ ggplot(model_comparison_df, aes(x = delta, y = weight)) +
 
 # Compute Phylogenetic Signal
 trait_m <- setNames(as.matrix(transDF_2$avg_mr), transDF_2$scientific_name)
+trait_tp <- setNames(as.matrix(transDF_2$avg_trophic_position), transDF_2$scientific_name)
+trait_mass <- setNames(as.matrix(transDF_2$avg_mass), transDF_2$scientific_name)
 
 phylosig(pruned_tree, trait_m, method = "lambda")
+phylosig(pruned_tree, trait_tp, method = "lambda")
+phylosig(pruned_tree, trait_mass, method = "lambda")
+
 
 # Aggregate Data
 transDF_avg <- transDF %>%
@@ -382,16 +387,7 @@ transDF_ordered <- transDF_avg %>%
   filter(scientific_name %in% pruned_tree$tip.label) %>%
   arrange(match(scientific_name, pruned_tree$tip.label))
 
-x <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
-
-# Remove NA values from the trait vector
-x <- na.omit(x)
-
-# Plot tree
-plotBranchbyTrait(
-  tree = pruned_tree, 
-  x = x) 
-# Plot Average Metabolic Rate
+# plot Average Metabolic Rate
 x_mr <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
 x_mr <- na.omit(x_mr)  # Remove NA values
 trait_mapped_tree_mr <- plotBranchbyTrait(
@@ -400,7 +396,7 @@ trait_mapped_tree_mr <- plotBranchbyTrait(
   mode = "tips", 
   cols = viridis(100),  
   legend = TRUE,                      
-  xlims = range(x, na.rm = TRUE)
+  xlims = range(x_mr, na.rm = TRUE)
 )
 
 # Add title
