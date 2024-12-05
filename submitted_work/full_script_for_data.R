@@ -160,9 +160,19 @@ ggplot(transDF, aes(x = std_mass_fourth_root, y = std_whole_organism_mr_watts_fo
        y = "Whole Organism MR (Fourth Root)") +
   theme_minimal()
 
+
 # Multiple linear regression with trophic position and body mass as explanatory variables
 ols_trophic_and_mass <- lm(std_whole_organism_mr_watts_fourth ~ std_trophic_position + std_mass_fourth_root, data = transDF)
 summary(ols_trophic_and_mass)
+
+# scatter plot for multiple linear model with body mass + trophic position
+ggplot(transDF, aes(x = std_trophic_position + std_mass_fourth_root, y = std_whole_organism_mr_watts_fourth)) +
+  geom_point() +  # Scatter plot of the data points
+  geom_smooth(method = "lm", col = "red") +  # Add the regression line
+  labs(title = "Linear Regression: Whole Organism MR vs. Mass (Fourth Root) + Trophic Position",
+       x = "Mass (Fourth Root) + Trophic Position",
+       y = "Whole Organism MR (Fourth Root)") +
+  theme_minimal()
 
 # plotting residuals from linear model
 ## Counting Residuals
