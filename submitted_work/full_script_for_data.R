@@ -66,9 +66,8 @@ main_dataset3$whole_organism_mr_watts <- as.numeric(as.character(main_dataset3$w
 
 # Shapiro-Wilk test
 shapiro.test(main_dataset3$whole_organism_mr_watts)
-
-# Log-transform the data
-main_dataset3$log_whole_organism_mr_watts <- log(main_dataset3$whole_organism_mr_watts + 1)
+shapiro.test(main_dataset3$mr_mass_grams)
+shapiro.test(main_dataset3$trophic_position)
 
 # Create a density plot (line plot)
 ggplot(main_dataset3, aes(x = whole_organism_mr_watts)) +
