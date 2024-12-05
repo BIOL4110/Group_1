@@ -1506,9 +1506,15 @@ on Shark Metabolic Rate</h1>
 </div>
 <div id="phylogenetic-tree" class="section level3">
 <h3>2.4 Phylogenetic Tree</h3>
-<pre><code>Loaded the full teleost chronogram and the chondro subset phylogenetic tree from the Gravel et al dataset. Species names in the phylogenetic tree were updated to correct the nomenclature and match the dataset created in section 2.2. Species names were extracted from both the dataset and the phylogenetic tree, and a comparison was made to identify any mismatches between the two datasets. The phylogenetic tree was then pruned to include only the species present in the dataset.</code></pre>
-<p>2.5 Phylogenetic Least Squares (PGLS) Modelling Reordered the dataset
-to align with the order of tree tips by filtering for species present in
+<p>Loaded the full teleost chronogram and the chondro subset
+phylogenetic tree from the Gravel et al., 2024 dataset. Species names in
+the phylogenetic tree were updated to correct the nomenclature and match
+the dataset created in section 2.2. Species names were extracted from
+both the dataset and the phylogenetic tree, and a comparison was made to
+identify any mismatches between the two datasets. The phylogenetic tree
+was then pruned to include only the species present in the dataset. ###
+2.5 Phylogenetic Least Squares (PGLS) Modelling Reordered the dataset to
+align with the order of tree tips by filtering for species present in
 both the tree and dataset, then arranging the rows according to the
 sequence of tree tips. Verified the root edge length of the pruned tree
 and corrected it by setting the value to 0. Fitted three PGLS models:
@@ -1528,12 +1534,68 @@ rate, trophic position, and body mass respectively.</p>
 </div>
 <div id="results" class="section level2">
 <h2>Results</h2>
-<ul>
-<li>Fix line of best fit on graphs</li>
-<li>Model comparisons</li>
-</ul>
+<div id="ols" class="section level3">
+<h3>3.1 OLS</h3>
+<p>Our first linear regression model examined the relationship between
+metabolic rate and trophic position, which revealed a significant
+positive relationship (slope = 0.638, p-value &lt; 2 x 10-16),
+explaining 40.7% of the variance in metabolic rate (R2 = 0.407) with a
+residual standard error (RSE) of 0.7703. This indicates that when
+considered as the only explanatory variable, trophic position is a
+strong predictor for metabolic rate.</p>
+<p>In comparison, the results from our metabolic rate vs. body mass
+showed a significantly stronger positive relationship (slope = 0.769,
+p-value &lt; 2 x 10-16) that explained a higher proportion of variance
+in metabolic rate (R2= 0.592) with a lower RSE of 0.6392. Therefore,
+these results propose that the body mass model is a better fit when
+compared to the trophic position-only model.</p>
+<p>When both variables were included in a multiple linear regression
+model, body mass remained the dominant predictor (slope = 0.727, p-value
+&lt; 2 x 10-16), while the trophic position was weak and non-significant
+(slope = 0.053, p = 0.072). This model explained 59.3% of variance in
+metabolic rate (R2 = 0.593) with an RSE of 0.6386, which only slightly
+differed from the body mass-only model. These findings suggest that
+trophic position has minimal influence when body mass is accounted for
+in the model. The residuals of the combined model were also evenly
+distributed around zero (702 positive, 629 negative values) with no
+patterns, confirming the validity of the model.</p>
+</div>
+<div id="pgls" class="section level3">
+<h3>3.2 PGLS</h3>
+<p>In order to account for phylogenetic relationships among species, we
+utilized a PGLS model to assess the relationship between variables
+metabolic rate, trophic position, and body mass. In the combined model
+(trophic position + body mass) body mass remained a significant
+predictor (β = 1.253, p-value &lt; 0.001), while trophic position did
+not show a significant effect (β = 0.0036, p-value = 0.9752). The model
+explained 79.5% of the variance in metabolic rate and had a strong
+phylogenetic signal of 0.814 meaning that metabolic rates were highly
+conserved in closely related species.</p>
+<p>The body mass-only model showed to have the lowest AIC value (AIC =
+73.03) and explained a similar proportion of variance as the combined
+model. Body mass persisted as a strong predictor for metabolic rate;
+however, the trophic position-only model showed a much poorer fit with a
+high AIC value (AIC = 113.58) and a non-significant effect (β = 0.604, p
+= 0.9752).</p>
+<p>Our model selection then identified the body mass-only model as the
+best-supported model (ΔAIC = 0), which accounted for 80.2% of the model
+weight. The combined model was the second best model (ΔAIC = 2.79, model
+weight = 19.8%) and trophic position performed the worst (ΔAIC = 40.55).
+In the model comparison plot, the body mass-only model was the only one
+to fall into the ΔAIC &lt; 2 threshold (fig 4) indicating the dominant
+role of body mass in explaining metabolic rate variability across shark
+species.</p>
 <p>PGLS and OLS results</p>
-<p>Trait Mapping</p>
+</div>
+<div id="trait-mapping" class="section level3">
+<h3>3.3 Trait Mapping</h3>
+<pre><code>Trait mapping revealed no clear pattern in the distribution of metabolic rates associated with ecological roles across species since some carnivorous and omnivorous species both had high metabolic rates, therefore our ecological hypothesis is not supported. In contrast, body mass showed some correlation to metabolic rate since larger species like Oncorhynchus nerka exhibited higher metabolic rates. However, there are some exceptions such as small species like Gadus morhua having moderate rates indicating that other factors may play a role in determining metabolic rates. </code></pre>
+<p>Our results strongly support the “Body Size” hypothesis demonstrating
+that body mass is the primary driver of metabolic rate across shark
+species, outperforming trophic position in explaining variation. While
+trophic position had some predictive value when considered alone, its
+influence was minimal when body mass was included.</p>
+</div>
 </div>
 <div id="discussion" class="section level2">
 <h2>Discussion</h2>

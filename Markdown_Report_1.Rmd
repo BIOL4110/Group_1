@@ -20,7 +20,7 @@ Group 1: Emma Booth (1149027), Annika Laurin (1183145), Samantha Mok (1126756), 
 ### 2.3 Ordinary Least Squares (OLS) Modelling
 	A simple linear regression was performed to examine the relationships between standardized whole-organism metabolic rate and standardized trophic position, standardized whole-organism metabolic rate and standardized body mass, and standardized trophic position and standardized body mass. A multiple linear regression was conducted to evaluate the combined effects of standardized trophic position and standardized body mass on standardized whole-organism metabolic rate. Residuals from the multiple regression model were extracted for analysis and visualization. Scatter plots of residuals against standardized trophic position and standardized body mass were created to identify potential patterns and deviations. A diagnostic plot of fitted values versus residuals was generated to assess model assumptions and overall fit.
 ### 2.4 Phylogenetic Tree
-	Loaded the full teleost chronogram and the chondro subset phylogenetic tree from the Gravel et al., 2024 dataset. Species names in the phylogenetic tree were updated to correct the nomenclature and match the dataset created in section 2.2. Species names were extracted from both the dataset and the phylogenetic tree, and a comparison was made to identify any mismatches between the two datasets. The phylogenetic tree was then pruned to include only the species present in the dataset.
+  Loaded the full teleost chronogram and the chondro subset phylogenetic tree from the Gravel et al., 2024 dataset. Species names in the phylogenetic tree were updated to correct the nomenclature and match the dataset created in section 2.2. Species names were extracted from both the dataset and the phylogenetic tree, and a comparison was made to identify any mismatches between the two datasets. The phylogenetic tree was then pruned to include only the species present in the dataset.
 ### 2.5 Phylogenetic Least Squares (PGLS) Modelling
 Reordered the dataset to align with the order of tree tips by filtering for species present in both the tree and dataset, then arranging the rows according to the sequence of tree tips. Verified the root edge length of the pruned tree and corrected it by setting the value to 0. Fitted three PGLS models: one predicting whole-organism metabolic rate using both trophic position and body mass, another using only trophic position, and a third using only body mass. Performed a model comparison to identify the best models based on delta AIC values.
 ### 2.6 Trait Mapping
@@ -43,13 +43,31 @@ PGLS and OLS
 ```
 
 ## Results
-- Fix line of best fit on graphs
-- Model comparisons
+
+### 3.1 OLS
+  Our first linear regression model examined the relationship between metabolic rate and trophic position, which revealed a significant positive relationship (slope = 0.638, p-value < 2 x 10-16), explaining 40.7% of the variance in metabolic rate (R2 = 0.407) with a residual standard error (RSE) of 0.7703. This indicates that when considered as the only explanatory variable, trophic position is a strong predictor for metabolic rate. 
+  
+  In comparison, the results from our metabolic rate vs. body mass showed a significantly stronger positive relationship (slope = 0.769, p-value < 2 x 10-16) that explained a higher proportion of variance in metabolic rate (R2= 0.592) with a lower RSE of 0.6392. Therefore, these results propose that the body mass model is a better fit when compared to the trophic position-only model.
+  
+  When both variables were included in a multiple linear regression model, body mass remained the dominant predictor (slope = 0.727, p-value < 2 x 10-16), while the trophic position was weak and non-significant (slope = 0.053, p = 0.072). This model explained 59.3% of variance in metabolic rate (R2 = 0.593) with an RSE of 0.6386, which only slightly differed from the body mass-only model. These findings suggest that trophic position has minimal influence when body mass is accounted for in the model. The residuals of the combined model were also evenly distributed around zero (702 positive, 629 negative values) with no patterns, confirming the validity of the model. 
+
+### 3.2 PGLS
+  In order to account for phylogenetic relationships among species, we utilized a PGLS model to assess the relationship between variables metabolic rate, trophic position, and body mass. In the combined model (trophic position + body mass) body mass remained a significant predictor (β = 1.253, p-value < 0.001), while trophic position did not show a significant effect (β = 0.0036, p-value = 0.9752). The model explained 79.5% of the variance in metabolic rate and had a strong phylogenetic signal of 0.814 meaning that metabolic rates were highly conserved in closely related species. 
+
+  The body mass-only model showed to have the lowest AIC value (AIC = 73.03) and explained a similar proportion of variance as the combined model. Body mass persisted as a strong predictor for metabolic rate; however, the trophic position-only model showed a much poorer fit with a high AIC value (AIC = 113.58) and a non-significant effect (β = 0.604, p = 0.9752). 
+
+Our model selection then identified the body mass-only model as the best-supported model (ΔAIC = 0), which accounted for 80.2% of the model weight. The combined model was the second best model (ΔAIC = 2.79, model weight = 19.8%) and trophic position performed the worst (ΔAIC = 40.55). In the model comparison plot, the body mass-only model was the only one to fall into the ΔAIC < 2 threshold (fig 4) indicating the dominant role of body mass in explaining metabolic rate variability across shark species. 
 
 PGLS and OLS results
 ```{r}
 
 ```
+
+
+### 3.3 Trait Mapping
+	Trait mapping revealed no clear pattern in the distribution of metabolic rates associated with ecological roles across species since some carnivorous and omnivorous species both had high metabolic rates, therefore our ecological hypothesis is not supported. In contrast, body mass showed some correlation to metabolic rate since larger species like Oncorhynchus nerka exhibited higher metabolic rates. However, there are some exceptions such as small species like Gadus morhua having moderate rates indicating that other factors may play a role in determining metabolic rates. 
+	
+  Our results strongly support the “Body Size” hypothesis demonstrating that body mass is the primary driver of metabolic rate across shark species, outperforming trophic position in explaining variation. While trophic position had some predictive value when considered alone, its influence was minimal when body mass was included. 
 
 Trait Mapping
 ```{r}
