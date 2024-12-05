@@ -11,6 +11,7 @@ library(phytools)
 library(tidyverse)
 library(MuMIn)
 library(viridis)
+library(gridExtra)
 
 
 
@@ -66,9 +67,8 @@ main_dataset3$whole_organism_mr_watts <- as.numeric(as.character(main_dataset3$w
 
 # Shapiro-Wilk test
 shapiro.test(main_dataset3$whole_organism_mr_watts)
-
-# Log-transform the data
-main_dataset3$log_whole_organism_mr_watts <- log(main_dataset3$whole_organism_mr_watts + 1)
+shapiro.test(main_dataset3$mr_mass_grams)
+shapiro.test(main_dataset3$trophic_position)
 
 # Create a density plot (line plot)
 ggplot(main_dataset3, aes(x = whole_organism_mr_watts)) +
@@ -161,9 +161,19 @@ ggplot(transDF, aes(x = std_mass_fourth_root, y = std_whole_organism_mr_watts_fo
        y = "Whole Organism MR (Fourth Root)") +
   theme_minimal()
 
+
 # Multiple linear regression with trophic position and body mass as explanatory variables
 ols_trophic_and_mass <- lm(std_whole_organism_mr_watts_fourth ~ std_trophic_position + std_mass_fourth_root, data = transDF)
 summary(ols_trophic_and_mass)
+
+# scatter plot for multiple linear model with body mass + trophic position
+ggplot(transDF, aes(x = std_trophic_position + std_mass_fourth_root, y = std_whole_organism_mr_watts_fourth)) +
+  geom_point() +  # Scatter plot of the data points
+  geom_smooth(method = "lm", col = "red") +  # Add the regression line
+  labs(title = "Multiple Linear Regression: Whole Organism MR vs. Mass (Fourth Root) + Trophic Position",
+       x = "Mass (Fourth Root) + Trophic Position",
+       y = "Whole Organism MR (Fourth Root)") +
+  theme_minimal()
 
 # plotting residuals from linear model
 ## Counting Residuals
@@ -329,6 +339,45 @@ mod3p <- phylolm(avg_mr ~ avg_mass,
 # Summarize the model output
 summary(mod1p)
 
+
+# Extract fitted values for the models
+transDF_2$fitted_mod1p <- predict(mod1p)
+transDF_2$fitted_mod2p <- predict(mod2p)
+transDF_2$fitted_mod3p <- predict(mod3p)
+
+
+# Plot for Model 1: Avg MR vs. Avg Troph Pos + Avg Mass
+p1 <- ggplot(transDF_2, aes(x = avg_mass, y = avg_mr)) +
+  geom_point(aes(color = avg_trophic_position), size = 3) +
+  geom_line(aes(y = fitted_mod1p), color = "blue", size = 1) +
+  labs(title = "Model 1: Avg MR vs. Avg Troph Pos + Avg Mass",
+       x = "Average Mass",
+       y = "Average Metabolic Rate",
+       color = "Trophic Position") +
+  theme_minimal()
+
+# Plot for Model 2: Avg MR vs. Avg Troph Pos
+p2 <- ggplot(transDF_2, aes(x = avg_trophic_position, y = avg_mr)) +
+  geom_point(size = 3) +
+  geom_line(aes(y = fitted_mod2p), color = "green", size = 1) +
+  labs(title = "Model 2: Avg MR vs. Avg Troph Pos",
+       x = "Average Trophic Position",
+       y = "Average Metabolic Rate") +
+  theme_minimal()
+
+# Plot for Model 3: Avg MR vs. Avg Mass
+p3 <- ggplot(transDF_2, aes(x = avg_mass, y = avg_mr)) +
+  geom_point(size = 3) +
+  geom_line(aes(y = fitted_mod3p), color = "red", size = 1) +
+  labs(title = "Model 3: Avg MR vs. Avg Mass",
+       x = "Average Mass",
+       y = "Average Metabolic Rate") +
+  theme_minimal()
+
+# Display the 3 plots
+grid.arrange(p1, p2, p3, nrow = 3)
+
+
 # Model comparison using MuMIn: 
 
 (model_comparison <- dredge(mod1p))
@@ -345,8 +394,12 @@ model_comparison_filtered <- model_comparison[!grepl("^1$", rownames(model_compa
 # Plotting the 3 model comparison
 model_comparison_df <- as.data.frame(model_comparison_filtered)
 
+# Add labels for the models
+model_comparison_df$label <- c("BM-only", "Combined", "TP-only")
+
 ggplot(model_comparison_df, aes(x = delta, y = weight)) +
-  geom_point(size = 4, aes(color = factor(delta < 2))) +  # Highlights models within delta AIC < 2
+  geom_point(size = 4, aes(color = factor(delta < 2))) + # Highlights models within delta AIC < 2
+  geom_text(aes(label = label), vjust = -0.8, size = 3) +
   scale_color_manual(values = c("black", "red")) +         # Color best models
   labs(title = "Model Comparison (AICc vs. Weight)",
        x = "Delta AIC", 
@@ -365,8 +418,13 @@ ggplot(model_comparison_df, aes(x = delta, y = weight)) +
 
 # Compute Phylogenetic Signal
 trait_m <- setNames(as.matrix(transDF_2$avg_mr), transDF_2$scientific_name)
+trait_tp <- setNames(as.matrix(transDF_2$avg_trophic_position), transDF_2$scientific_name)
+trait_mass <- setNames(as.matrix(transDF_2$avg_mass), transDF_2$scientific_name)
 
 phylosig(pruned_tree, trait_m, method = "lambda")
+phylosig(pruned_tree, trait_tp, method = "lambda")
+phylosig(pruned_tree, trait_mass, method = "lambda")
+
 
 # Aggregate Data
 transDF_avg <- transDF %>%
@@ -382,16 +440,7 @@ transDF_ordered <- transDF_avg %>%
   filter(scientific_name %in% pruned_tree$tip.label) %>%
   arrange(match(scientific_name, pruned_tree$tip.label))
 
-x <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
-
-# Remove NA values from the trait vector
-x <- na.omit(x)
-
-# Plot tree
-plotBranchbyTrait(
-  tree = pruned_tree, 
-  x = x) 
-# Plot Average Metabolic Rate
+# plot Average Metabolic Rate
 x_mr <- setNames(transDF_ordered$avg_mr, transDF_ordered$scientific_name)
 x_mr <- na.omit(x_mr)  # Remove NA values
 trait_mapped_tree_mr <- plotBranchbyTrait(
@@ -400,7 +449,7 @@ trait_mapped_tree_mr <- plotBranchbyTrait(
   mode = "tips", 
   cols = viridis(100),  
   legend = TRUE,                      
-  xlims = range(x, na.rm = TRUE)
+  xlims = range(x_mr, na.rm = TRUE)
 )
 
 # Add title
