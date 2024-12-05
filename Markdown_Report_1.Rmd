@@ -126,6 +126,13 @@ Trait Mapping
 ```
 
 ## Discussion
+The relationship between body size and MR is a key component of the metabolic theory (Brown et al., 2004). Our research suggests that body size can be a strong predictor of MR in individuals, enhancing our understanding of marine metabolism (Brown et al., 2004). Typically, MR is measured in controlled laboratory settings where basal metabolic rate (BMR) is assessed when the organism is inactive (Brown et al., 2004). However, in natural environments, field metabolic rates (FMR) are typically higher than BMR, as organisms must allocate energy for activities like foraging, predator avoidance, physiological regulation, and other maintenance processes (Brown et al., 2004). This discrepancy between BMR and FMR is an important area of study, as it provides insights into energy expenditure, survival strategies, and ecological adaptations.
+  
+By understanding the relationship between trophic position and metabolic rates, we can better identify species that are sensitive to overfishing (Gravel et al., 2024). Since sharks often exhibit slow life histories characterized by slow growth, they are more sensitive to overfishing (Gravel et al., 2024). By better understanding the relationship between trophic position, metabolisms and body size, our research can help identify where different species fall along a spectrum of sensitivity to population declines.
+  
+By examining how metabolism and life history traits, such as body size and trophic position, are connected, we can gain a deeper understanding of how species evolve in response to their environment (Gravel et al., 2024). This approach can also enhance our understanding of Elasmobranch evolution and shed light on how these species have survived for so long.
+  
+Key questions emerging from our research are focused on understanding how climate change may interact with marine populations. With rising global ocean temperatures, understanding how Elasmobranch metabolism responds to environmental changes can help predict shifts in their populations and ranges (Osgood et al., 2021). 
 
 ## References
 
